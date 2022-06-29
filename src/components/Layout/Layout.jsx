@@ -12,7 +12,6 @@ import {
   Toolbar,
   Typography,
   CssBaseline,
-  Divider,
   ThemeProvider,
 } from "@mui/material";
 import { MdMenu, MdPowerOff } from "react-icons/md";
@@ -59,7 +58,6 @@ const Layout = (props) => {
           </ListItem>
         ))}
       </List>
-      <Divider />
     </div>
   );
 
@@ -85,7 +83,7 @@ const Layout = (props) => {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: "none" } }}
             >
-              <MdMenu />
+              <MdMenu color="#fff" />
             </IconButton>
             <Typography
               variant="h4"

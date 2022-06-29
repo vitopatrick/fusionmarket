@@ -1,38 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { AdvancedChart, TickerTape } from "react-tradingview-embed";
+import { AdvancedChart, SymbolOverview } from "react-tradingview-embed";
 
 const TradingViews = () => {
-  // symbols to display in the Ticker Tap
-  const symbol = [
-    {
-      proName: "BITSTAMP:BTCUSD",
-      title: "Bitcoin",
-    },
-    {
-      proName: "BITSTAMP:ETHUSD",
-      title: "Ethereum",
-    },
-    {
-      description: "Rune",
-      proName: "BINANCE:RUNEUSDT",
-    },
-    {
-      description: "Shiba",
-      proName: "BINANCE:SHIBUSDT",
-    },
-    {
-      description: "Doge",
-      proName: "BINGX:DOGEUSDT",
-    },
-  ];
-
   return (
     <div>
       <Box>
-        <TickerTape
+        <SymbolOverview
           widgetProps={{
-            symbols: symbol,
+            symbols: [
+              ["Bitcoin", "BINANCE:BTCUSDT|1D"],
+              ["Litecoin", "COINBASE:LTCUSD|1D"],
+              ["Cardano", "COINBASE:ADAUSD|1D"],
+            ],
           }}
         />
       </Box>
@@ -48,7 +28,7 @@ const TradingViews = () => {
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography variant="caption" textAlign="center">
-          Bitpay © 2022
+          fidelity-market © 2022
         </Typography>
       </Box>
     </div>

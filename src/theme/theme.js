@@ -3,12 +3,6 @@ import { createTheme } from "@mui/material/styles";
 
 // ? Create Dark & Light Theme For Website
 export const theme = createTheme({
-  palette: {
-    background: {
-      default: "#192734",
-      paper: "#15202B",
-    },
-  },
   typography: {
     fontFamily: ["Quicksand", "sans-serif"].join(","),
   },
@@ -51,9 +45,13 @@ export const theme = createTheme({
 export const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    background: {
+      default: "#192734",
+      paper: "#15202B",
+    },
   },
   typography: {
-    fontFamily: ["IBM Plex Sans", "sans-serif"].join(","),
+    fontFamily: ["Quicksand", "sans-serif"].join(","),
   },
   components: {
     MuiButton: {
