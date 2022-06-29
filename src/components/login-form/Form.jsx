@@ -98,7 +98,7 @@ const Form = () => {
 
   return (
     <Box className="form" sx={{ p: 6 }}>
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Paper sx={{ p: 2 }}>
           <Box>
             <Link to="/">
