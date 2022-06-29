@@ -51,7 +51,7 @@ const Form = () => {
               sx={{ fontWeight: "bold" }}
               gutterBottom
             >
-              Let us here your complain
+              Let us hear your complain
             </Typography>
           </Box>
           <Box>

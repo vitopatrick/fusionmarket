@@ -97,10 +97,10 @@ const Form = () => {
   };
 
   return (
-    <Box className="form" sx={{ p: 6 }}>
-      <Container maxWidth="md">
+    <Box className="form" sx={{ p: { xs: 2, md: 6 } }}>
+      <Container>
         <Paper sx={{ p: 2 }}>
-          <Box>
+          <Box sx={{ mt: 2 }}>
             <Link to="/">
               <Typography
                 variant="h4"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Box, Divider } from "@mui/material";
+import Testimony from "./Testimony";
 
 const Testimonials = () => {
   return (
@@ -28,6 +29,9 @@ const Testimonials = () => {
             say about us
           </Typography>
         </Box>
+      </Box>
+      <Box>
+        <Testimony />
       </Box>
     </>
   );
