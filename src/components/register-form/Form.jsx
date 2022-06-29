@@ -114,7 +114,7 @@ const Form = () => {
         uid: user.uid,
       });
       // toast notification
-      toast.success("Welcome to Bitpay Please verify your email", {
+      toast.success("Welcome to Fidelity-Market Please verify your email", {
         position: "top-center",
         theme: "colored",
       });
