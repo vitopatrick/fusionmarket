@@ -13,12 +13,14 @@ import {
   Typography,
   CssBaseline,
   Divider,
+  ThemeProvider,
 } from "@mui/material";
 import { MdMenu, MdPowerOff } from "react-icons/md";
 import { links } from "./sidebar";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
+import { darkTheme } from "../../theme/theme";
 
 const drawerWidth = 240;
 
@@ -65,106 +67,108 @@ const Layout = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", bgcolor: "background.default" }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MdMenu />
-          </IconButton>
-          <Typography
-            variant="h4"
-            noWrap
-            component="h1"
-            onClick={goHome}
-            sx={{ p: 1, color: "#ffff", cursor: "pointer" }}
-          >
-            Bitpay
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
+    <ThemeProvider theme={darkTheme}>
+      <Box sx={{ display: "flex", bgcolor: "background.default" }}>
+        <CssBaseline />
+        <AppBar
+          position="fixed"
           sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+            ml: { sm: `${drawerWidth}px` },
           }}
         >
-          {drawer}
-          <Box>
-            <List>
-              <ListItem button onClick={handleLogout}>
-                <ListItemIcon>
-                  <MdPowerOff />
-                </ListItemIcon>
-                <ListItemText primary="Logout" />
-              </ListItem>
-            </List>
-          </Box>
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-          open
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MdMenu />
+            </IconButton>
+            <Typography
+              variant="h4"
+              noWrap
+              component="h1"
+              onClick={goHome}
+              sx={{ p: 1, color: "#ffff", cursor: "pointer" }}
+            >
+              Fidelity-Market
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Box
+          component="nav"
+          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          aria-label="mailbox folders"
         >
-          {drawer}
-          <Box>
-            <List>
-              <ListItem button onClick={handleLogout}>
-                <ListItemIcon>
-                  <MdPowerOff />
-                </ListItemIcon>
-                <ListItemText primary="Logout" />
-              </ListItem>
-            </List>
-          </Box>
-        </Drawer>
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+          >
+            {drawer}
+            <Box>
+              <List>
+                <ListItem button onClick={handleLogout}>
+                  <ListItemIcon>
+                    <MdPowerOff />
+                  </ListItemIcon>
+                  <ListItemText primary="Logout" />
+                </ListItem>
+              </List>
+            </Box>
+          </Drawer>
+          <Drawer
+            variant="permanent"
+            sx={{
+              display: { xs: "none", sm: "block" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+            open
+          >
+            {drawer}
+            <Box>
+              <List>
+                <ListItem button onClick={handleLogout}>
+                  <ListItemIcon>
+                    <MdPowerOff />
+                  </ListItemIcon>
+                  <ListItemText primary="Logout" />
+                </ListItem>
+              </List>
+            </Box>
+          </Drawer>
+        </Box>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 3,
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+          }}
+        >
+          <Toolbar />
+          {props.children}
+        </Box>
       </Box>
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
-        <Toolbar />
-        {props.children}
-      </Box>
-    </Box>
+    </ThemeProvider>
   );
 };
 

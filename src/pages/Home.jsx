@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Newsletter from "../components/Newsletter/Newsletter";
 import Reason from "../components/Reason/Reason";
-import Start from "../components/Start/Start";
-import Work from "../components/Work/Work";
 import Plan from "../components/Plan/Plan";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Questions from "../components/faq/Questions";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -36,11 +35,10 @@ const Home = () => {
     <React.Fragment>
       <Header />
       <About />
-      <Start />
-      <Work />
       <Reason />
       <Plan />
-      <Newsletter />
+      <Testimonials />
+      <Questions />
       <Footer />
     </React.Fragment>
   );

@@ -1,39 +1,83 @@
+// ? Import function to create Material UI Theme
 import { createTheme } from "@mui/material/styles";
 
+// ? Create Dark & Light Theme For Website
 export const theme = createTheme({
   palette: {
-    mode: "dark",
     background: {
-      default: "#0a1929",
-      paper: "#001e3c",
+      default: "#192734",
+      paper: "#15202B",
     },
   },
   typography: {
-    subtitle1: {
-      fontFamily: ["Josefin Sans", "sans-serif"].join(","),
+    fontFamily: ["Quicksand", "sans-serif"].join(","),
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+          fontWeight: "bold",
+        },
+      },
+      defaultProps: {
+        color: "primary",
+        disableElevation: true,
+        disableRipple: true,
+        variant: "contained",
+      },
     },
-    body1: {
-      fontFamily: ["Josefin Sans", "sans-serif"].join(","),
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "primary",
+        },
+      },
+      defaultProps: {
+        color: "primary",
+      },
     },
-    h6: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#311b92",
+        },
+      },
     },
-    h5: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
+  },
+});
+
+// ? Create Dark Theme For Website
+export const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+  typography: {
+    fontFamily: ["IBM Plex Sans", "sans-serif"].join(","),
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+        },
+      },
+      defaultProps: {
+        disableRipple: true,
+        disableElevation: true,
+      },
     },
-    h3: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+        },
+      },
     },
-    h4: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
-      fontWeight: "bolder",
-    },
-    caption: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
-    },
-    button: {
-      fontFamily: ["Josefin Sans", "sans-serif"].join(","),
-      textTransform: "lowercase",
+    MuiTextField: {
+      defaultProps: {
+        variant: "filled",
+      },
     },
   },
 });

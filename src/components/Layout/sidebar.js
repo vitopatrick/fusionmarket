@@ -11,7 +11,7 @@ export const links = [
   {
     text: "Dashboard",
     path: "/dashboard",
-    icon: <MdDashboard size="18px" />,
+    icon: <MdDashboard />,
   },
   {
     text: "Account Settings",
@@ -31,11 +31,6 @@ export const links = [
   {
     text: "Withdraw",
     path: "/withdraw",
-    icon: <MdCreditScore />,
-  },
-  {
-    text: "Signals",
-    path: "/signals",
     icon: <MdCreditScore />,
   },
   {

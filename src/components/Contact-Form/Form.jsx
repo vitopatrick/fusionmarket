@@ -1,6 +1,12 @@
 import React, { useRef } from "react";
-import "./form.css";
-import Image from "../../img/contact.png";
+import {
+  Typography,
+  Paper,
+  Box,
+  TextField,
+  Container,
+  Button,
+} from "@mui/material";
 import { toast } from "react-toastify";
 
 const Form = () => {
@@ -35,41 +41,64 @@ const Form = () => {
   };
 
   return (
-    <div className="contact">
-      <div className="contact__grid">
-        <div className="contact__img">
-          <img src={Image} alt="" />
-        </div>
-        <div className="contact__form">
-          <div className="contact__form-title mt-1">
-            <h1>Let us here your complain</h1>
-          </div>
-          <div className="contact__form-grid">
-            <div className="form__group">
-              <label htmlFor="Name">Name</label>
-              <input type="text" name="name" ref={nameRef} />
-            </div>
-            <div className="form__group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" ref={emailRef} />
-            </div>
-          </div>
-          <div className="form__group mt-1">
-            <label htmlFor="subject">Subject</label>
-            <input type="email" name="subject" ref={subjectRef} />
-          </div>
-          <div className="form__group mt-1">
-            <label htmlFor="message">Message</label>
-            <textarea name="message" ref={messageRef}></textarea>
-          </div>
-          <div>
-            <button className="form__btn" onClick={sendMessage}>
-              Send
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Container sx={{ mt: 4 }} maxWidth="sm">
+      <Box>
+        <Paper sx={{ p: 2 }}>
+          <Box>
+            <Typography
+              variant="h5"
+              component="h1"
+              sx={{ fontWeight: "bold" }}
+              gutterBottom
+            >
+              Let us here your complain
+            </Typography>
+          </Box>
+          <Box>
+            <TextField
+              type="text"
+              name="name"
+              inputRef={nameRef}
+              variant="filled"
+              margin="normal"
+              label="full Name"
+              fullWidth
+            />
+            <TextField
+              type="email"
+              name="email"
+              inputRef={emailRef}
+              variant="filled"
+              margin="normal"
+              label="Enter Email"
+              fullWidth
+            />
+            <TextField
+              type="text"
+              name="Subject"
+              inputRef={subjectRef}
+              variant="filled"
+              margin="normal"
+              label="Subject"
+              fullWidth
+            />
+            <TextField
+              type="text"
+              name="message"
+              inputRef={messageRef}
+              variant="filled"
+              margin="normal"
+              label="Message"
+              fullWidth
+              multiline
+            />
+            <Button variant="contained" onClick={sendMessage} fullWidth>
+              Send Message
+            </Button>
+          </Box>
+        </Paper>
+      </Box>
+    </Container>
   );
 };
 

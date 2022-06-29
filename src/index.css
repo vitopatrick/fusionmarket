@@ -1,12 +1,10 @@
-/* base classes */
+/* ? base classes */
+
 * {
+  font-family: "Quicksand", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 a {
@@ -15,25 +13,5 @@ a {
 
 img {
   width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.text-main {
-  font-family: "Nunito", sans-serif;
-}
-
-p,
-span,
-.text-sec,
-input,
-select,
-textarea,
-label,
-button {
-  font-family: "Josefin Sans", sans-serif;
+  height: 100%;
 }

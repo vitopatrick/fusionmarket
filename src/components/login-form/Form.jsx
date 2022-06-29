@@ -1,14 +1,21 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth } from "../../firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  TextField,
+  Paper,
+} from "@mui/material";
 
-import "./form.css";
+import "../register-form/form.css";
 
 const Form = () => {
   // navigation
@@ -90,47 +97,78 @@ const Form = () => {
   };
 
   return (
-    <div className="form pd">
-      <div className="form__card shadow rounded my-5 p-3">
-        <div className="form__title text-center">
-          <Link to="/" className="fs-1 fw-bolder text-main text-primary">
-            Bitpay
-          </Link>
-          <p>
-            Click here to{" "}
-            <Link to="/register" className="text-primary">
-              Create Account
+    <Box className="form" sx={{ p: 6 }}>
+      <Container maxWidth="sm">
+        <Paper sx={{ p: 2 }}>
+          <Box>
+            <Link to="/">
+              <Typography
+                variant="h4"
+                component="h1"
+                textAlign="center"
+                sx={{ fontWeight: "bold" }}
+              >
+                Fidelity-Market
+              </Typography>
             </Link>
-          </p>
-        </div>
-        <div className="form__container my-3">
-          <div className="my-4">
-            <label htmlFor="email" className="form-label">
-              Email
-            </label>
-            <input type="email" ref={emailRef} className="form-control" />
-          </div>
-          <div className="my-4">
-            <label htmlFor="password" className="form-label">
-              Password
-            </label>
-            <input type="password" ref={passwordRef} className="form-control" />
-          </div>
-          <div className="text-left my-3">
-            <Link
-              to="/"
-              className="text-muted text-sec"
-              onClick={resetPassword}
+          </Box>
+          <Box>
+            <TextField
+              type="email"
+              name="email"
+              margin="normal"
+              variant="filled"
+              label="Enter Email"
+              fullWidth
+              inputRef={emailRef}
+            />
+            <TextField
+              type="password"
+              name="password"
+              margin="normal"
+              variant="filled"
+              label="Password"
+              fullWidth
+              inputRef={passwordRef}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: 4,
+              }}
             >
-              Forgot Password
-            </Link>
-          </div>
-          <button className="btn btn-primary btn-block" onClick={loginUser}>
-            Login
-          </button>
-        </div>
-      </div>
-    </div>
+              <Typography
+                variant="body1"
+                textAlign="center"
+                gutterBottom
+                component="p"
+              >
+                if you do not have an account{" "}
+                <Link to="/register">Click Here</Link> to create one.
+              </Typography>
+              <Button variant="text" color="error" onClick={resetPassword}>
+                Click to Here to Recover Password.
+              </Button>
+            </Box>
+            <Button fullWidth variant="contained" onClick={loginUser}>
+              Sign In
+            </Button>
+            <Typography
+              variant="body1"
+              textAlign="center"
+              gutterBottom
+              component="p"
+              sx={{ mt: 6 }}
+            >
+              © Copyright 2022 Fidelity-Market All Rights Reserved.
+            </Typography>
+          </Box>
+        </Paper>
+      </Container>
+    </Box>
   );
 };
 

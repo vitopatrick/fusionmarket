@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { AppBar, Toolbar, Box, Typography, Button } from "@mui/material";
+import { links } from "./links";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -11,66 +13,66 @@ const Navbar = () => {
   };
   return (
     <React.Fragment>
-      <nav>
-        <div className="container">
+      <AppBar position="static">
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            p: 2,
+          }}
+        >
           <Link to="/">
-            <div className="img-res">
-              <h1 className="title">Bitpay</h1>
-            </div>
+            <Box>
+              <Typography
+                variant="h4"
+                component="h1"
+                sx={{ color: "#fff", fontWeight: "bold" }}
+              >
+                Fidelity-Market
+              </Typography>
+            </Box>
           </Link>
-          <div>
-            <Link to="/" className="links text-sec">
-              Home
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {links.map((link) => (
+              <Typography variant="body1" component="p" sx={{ mr: 5 }}>
+                <Link to={link.path} key={link.id} style={{ color: "#fff" }}>
+                  {link.title}
+                </Link>
+              </Typography>
+            ))}
+          </Box>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Link to="/register">
+              <Button variant="outlined" color="warning" size="large">
+                Get Started
+              </Button>
             </Link>
-            <Link to="/about" className="links text-sec">
-              About
+          </Box>
+          <Box className="bars">
+            <FaBars className="bars" size="20px" onClick={toggle} />
+          </Box>
+        </Toolbar>
+        <Box className={active ? "sidenav active" : "sidenav"}>
+          <Box sx={{ ml: 3, mt: 1 }}>
+            <FaTimes className="bars" size="20px" onClick={toggle} />
+          </Box>
+          <Box sx={{ p: 3 }}>
+            {links.map((link) => (
+              <Typography variant="body1" component="p" sx={{ mt: 1, mb: 3 }}>
+                <Link to={link.path} key={link.id} style={{ color: "#fff" }}>
+                  {link.title}
+                </Link>
+              </Typography>
+            ))}
+            <Link to="/register">
+              <Button fullWidth variant="outlined" color="warning">
+                Get Started
+              </Button>
             </Link>
-            <Link to="/contact" className="links text-sec">
-              Contact
-            </Link>
-          </div>
-          <div>
-            <Link to="/register" className="cta-1 text-sec">
-              Begin Here
-            </Link>
-            <Link to="/login" className="cta-2 text-sec">
-              Login
-            </Link>
-          </div>
-          <div className="bars">
-            {active ? (
-              <FaTimes className="bars" size="20px" onClick={toggle} />
-            ) : (
-              <FaBars className="bars" size="20px" onClick={toggle} />
-            )}
-          </div>
-        </div>
-        <div className={active ? "sidenav active" : "sidenav"}>
-          <div className="px-4 py-3 d-flex flex-column ">
-            <Link to="/" className="my-2 fs-sec w-100 text-white text-sec">
-              Home
-            </Link>
-            <Link to="/about" className="my-2  w-100 text-white text-sec">
-              About
-            </Link>
-            <Link to="/contact" className="my-2   w-100 text-white text-sec">
-              Contact
-            </Link>
-            <Link
-              to="/register"
-              className="my-2 w-100 btn btn-primary text-white text-sec "
-            >
-              Begin Here
-            </Link>
-            <Link
-              to="/login"
-              className="my-2 btn btn-outline-primary w-100 text-white text-sec"
-            >
-              Sign In
-            </Link>
-          </div>
-        </div>
-      </nav>
+          </Box>
+        </Box>
+      </AppBar>
     </React.Fragment>
   );
 };

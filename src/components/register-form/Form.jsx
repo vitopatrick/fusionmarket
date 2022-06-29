@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
   createUserWithEmailAndPassword,
@@ -7,8 +6,21 @@ import {
 } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { auth, store } from "../../firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./form.css";
+import {
+  Container,
+  Paper,
+  Button,
+  Typography,
+  Box,
+  Grid,
+  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@mui/material";
 
 const Form = () => {
   // control the input fields
@@ -18,12 +30,14 @@ const Form = () => {
   // toast configuration
   toast.configure();
   // navigation router hook
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
   // refs for form
-  const nameRef = useRef();
+  const firstNameRef = useRef();
+  const LastNameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
   const passwordRef = useRef();
+  const passwordConfirmRef = useRef();
   const countryRef = useRef();
 
   // fetch countries
@@ -43,7 +57,6 @@ const Form = () => {
       });
       setCountry(countries);
     } catch (error) {
-      console.log(error);
       setDisable(true);
     }
   };
@@ -57,11 +70,13 @@ const Form = () => {
     e.preventDefault();
     // check if the input fields are empty
     if (
-      !nameRef.current.value |
+      !firstNameRef.current.value |
       !emailRef.current.value |
       !phoneRef.current.value |
       !passwordRef.current.value |
-      !countryRef.current.value
+      !countryRef.current.value |
+      !LastNameRef.current.value |
+      !passwordConfirmRef.current.value
     ) {
       toast("Please fill the form correctly", {
         type: "error",
@@ -83,7 +98,7 @@ const Form = () => {
       // add to the database
       await setDoc(doc(store, "users", emailRef.current.value), {
         email: user.email,
-        name: nameRef.current.value,
+        name: firstNameRef.current.value + LastNameRef.current.value,
         phone: phoneRef.current.value,
         password: passwordRef.current.value,
         country: countryRef.current.value,
@@ -93,7 +108,7 @@ const Form = () => {
         deposited: 0,
         refBonus: 0,
         totalPackages: 0,
-        activePages: 0,
+        activePackages: 0,
         verified: user.emailVerified,
         createdAt: user.metadata.creationTime,
         uid: user.uid,
@@ -104,7 +119,7 @@ const Form = () => {
         theme: "colored",
       });
       // redirect user to login
-      naviagte("/login");
+      navigate("/login");
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         toast("Email is already in use", {
@@ -131,96 +146,130 @@ const Form = () => {
   };
 
   return (
-    <div className="form py-5">
-      <div className="form__card shadow p-3 rounded mt-2">
-        <div className="form__body">
-          <div className="form__title text-center my-5">
-            <Link to="/" className="fs-1 fw-bolder text-main text-primary">
-              Bitpay
-            </Link>
-            <p className="text-muted">
-              If you already have an account with us click here to{" "}
-              <Link to="/login" className="t-m">
-                Login
-              </Link>
-            </p>
-          </div>
-          <div className="form__container">
-            <div className="row my-3">
-              <div className="col-sm-12 col-md-6 col-lg-6">
-                <div className="form-group">
-                  <label htmlFor="Name" className="form-label">
-                    Name
-                  </label>
-                  <input type="text" ref={nameRef} className="form-control" />
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-6 col-lg-6 sm-mt-2">
-                <div>
-                  <label htmlFor="Name" className="form-label">
-                    Email
-                  </label>
-                  <input type="email" ref={emailRef} className="form-control" />
-                </div>
-              </div>
-            </div>
-
-            <div className="my-3">
-              <label htmlFor="telephone" className="form-label">
-                Phone Number
-              </label>
-              <input type="tel" ref={phoneRef} className="form-control" />
-            </div>
-            <div className="my-3">
-              <label htmlFor="password" className="form-label">
-                Password
-              </label>
-              <input
-                type="password"
-                ref={passwordRef}
-                className="form-control"
-              />
-            </div>
-            <div className="my-3">
-              <label htmlFor="phrase" className="form-label">
-                Choose Country
-              </label>
-              <select
-                ref={countryRef}
-                className="form-control"
-                disabled={disable}
+    <Box className="form">
+      <Container maxWidth="sm" sx={{ pt: 4, pb: 8 }}>
+        <Paper sx={{ p: 2 }}>
+          <Box>
+            <Link to="/">
+              <Typography
+                variant="h4"
+                component="h1"
+                textAlign="center"
+                sx={{ fontWeight: "bold" }}
               >
-                {country.map((state, index) => (
-                  <option key={index} value={state.main}>
-                    {state.main}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="mt-1 text-center">
-              <p className="text-muted">
-                By Clicking Register you therefore agree to the{" "}
-                <Link to="/terms" className="t-m">
-                  Terms & Conditions
-                </Link>
-                {""}of Bitpay
-              </p>
-            </div>
-            <button
-              className="btn btn-block btn-primary block"
-              onClick={saveUser}
+                Fidelity-Market
+              </Typography>
+            </Link>
+          </Box>
+          <Box>
+            <Grid container columnSpacing={2} rowSpacing={1}>
+              <Grid item xs={12} md={6}>
+                <TextField
+                  type="text"
+                  label="First Name"
+                  inputRef={firstNameRef}
+                  name="firstName"
+                  variant="filled"
+                  margin="normal"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField
+                  type="text"
+                  label="Last Name"
+                  inputRef={LastNameRef}
+                  name="lastName"
+                  variant="filled"
+                  fullWidth
+                  margin="normal"
+                />
+              </Grid>
+            </Grid>
+            <TextField
+              type="email"
+              label="Enter Email"
+              inputRef={emailRef}
+              name="email"
+              variant="filled"
+              margin="normal"
+              fullWidth
+            />
+            <TextField
+              type="tel"
+              label="Phone Number"
+              inputRef={phoneRef}
+              name="telephone"
+              margin="normal"
+              variant="filled"
+              fullWidth
+            />
+            <Grid container columnSpacing={2} rowSpacing={1}>
+              <Grid item xs={12} md={6}>
+                <TextField
+                  type="password"
+                  label="Password"
+                  inputRef={passwordRef}
+                  name="password"
+                  variant="filled"
+                  margin="normal"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField
+                  type="password"
+                  label="Confirm Password"
+                  inputRef={passwordConfirmRef}
+                  name="confirmPassword"
+                  variant="filled"
+                  margin="normal"
+                  fullWidth
+                />
+              </Grid>
+            </Grid>
+            <FormControl
+              fullWidth
+              sx={{ mt: 2, mb: 4 }}
+              variant="filled"
+              disable={disable}
             >
+              <InputLabel>Country</InputLabel>
+              <Select inputRef={countryRef} label="Select Country">
+                {country.map((count, index) => (
+                  <MenuItem value={count.main} key={index}>
+                    {count.main}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <Button fullWidth variant="contained" onClick={saveUser}>
               Register
-            </button>
-          </div>
-          <div className="text-center mt-2">
-            <p className="text-primary">
-              © Copyright 2021 Bitpay All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Button>
+            <Box>
+              <Typography
+                variant="body1"
+                textAlign="center"
+                gutterBottom
+                component="p"
+                sx={{ mt: 2 }}
+              >
+                Already Have An Account <Link to="/login">Login</Link>
+              </Typography>
+              <Typography
+                variant="body1"
+                textAlign="center"
+                gutterBottom
+                component="p"
+                sx={{ mt: 6, mb: 2 }}
+              >
+                © Copyright 2022 Fidelity-Market All Rights Reserved.
+              </Typography>
+            </Box>
+          </Box>
+        </Paper>
+      </Container>
+    </Box>
   );
 };
 

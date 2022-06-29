@@ -1,23 +1,23 @@
-// import the react components
+// ? Import the react components
 import React from "react";
 import ReactDOM from "react-dom";
 
-// import the stylesheets for bootstrap,react-toastify and the index or global stylesheet
+// ? Import the stylesheets for bootstrap,react-toastify and the index or global stylesheet
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
-// this function returns the report for the website
+// ? This function returns the report for the website
 import reportWebVitals from "./reportWebVitals";
 
-// import the react router dom
+// ? Import the react router dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// imports from material ui
+// ? Imports from material ui
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme/theme";
 
-// import Pages or Routes
+// ? Import Pages or Routes
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
@@ -35,7 +35,7 @@ import Refer from "./pages/Refer";
 import Terms from "./pages/Terms";
 import Signals from "./pages/Signals";
 
-// import the user context that will Cover the applications and control authentication state
+// ? Import the user context that will Cover the applications and control authentication state
 import UserProvider from "./context/UserContext";
 
 ReactDOM.render(
