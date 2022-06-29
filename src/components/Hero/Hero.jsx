@@ -26,7 +26,7 @@ const Hero = () => {
           >
             <Box sx={{ mt: 3 }}>
               <Typography
-                variant="h3"
+                variant="h4"
                 component="h1"
                 textAlign="center"
                 sx={{
@@ -51,9 +51,10 @@ const Hero = () => {
             <Box sx={{ mt: 3 }}>
               <Button
                 color="primary"
-                variant="outlined"
+                variant="contained"
                 endIcon={<FaChevronCircleRight />}
                 sx={{ fontSize: "18px" }}
+                size="large"
               >
                 Get Started
               </Button>

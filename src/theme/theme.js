@@ -34,7 +34,7 @@ export const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: "#311b92",
+          backgroundColor: "#15202B",
         },
       },
     },
@@ -63,6 +63,7 @@ export const darkTheme = createTheme({
       defaultProps: {
         disableRipple: true,
         disableElevation: true,
+        variant: "contained",
       },
     },
     MuiTabs: {
