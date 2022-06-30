@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Reason from "../components/Reason/Reason";
 import Plan from "../components/Plan/Plan";
-import Testimonials from "../components/Testimonials/Testimonials";
+// import Testimonials from "../components/Testimonials/Testimonials";
 import Questions from "../components/faq/Questions";
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
       <About />
       <Reason />
       <Plan />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Questions />
       <Footer />
     </React.Fragment>
