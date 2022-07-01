@@ -9,7 +9,7 @@ export const test = [
     person: "Sara Wilssons",
     position: "System user",
     testimony:
-      "I must say this platform is indeed amazing. it was a glimpse at first but today i can account for a real trade when it comes to investment on Prime Market.",
+      "I must say this platform is indeed amazing. it was a glimpse at first but today i can account for a real trade when it comes to investment on Fidelity Market.",
     img: woman,
   },
   {
