@@ -7,22 +7,7 @@ export const faqs = [
             Bitcoin and Ethereum, but there are more than 5,000 different
             cryptocurrencies in circulation, according to CoinLore.`,
   },
-  {
-    id: 2,
-    title: "What is crypto currency mining?",
-    about: `In a nutshell, cryptocurrency mining is a term that refers to the
-            process of gathering cryptocurrency as a reward for work that you
-            complete.`,
-  },
-  {
-    id: 3,
-    title: "Why do people crypto mine?",
-    about: `For some, they’re looking for another source of income. For others,
-            it’s about gaining greater financial freedom without governments or
-            banks butting in. But whatever the reason, cryptocurrencies are a
-            growing area of interest for technophiles, investors, and
-            cybercriminals alike.`,
-  },
+
   {
     id: 4,
     title: "How can i withdraw my earning balance?",

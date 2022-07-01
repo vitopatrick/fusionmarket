@@ -1,3 +1,8 @@
+import person1 from "../../img/person1.JPG";
+import person2 from "../../img/person2.JPG";
+import woman from "../../img/woman.JPG";
+import baseball from "../../img/baseball.JPG";
+
 export const test = [
   {
     id: 1,
@@ -5,7 +10,7 @@ export const test = [
     position: "System user",
     testimony:
       "I must say this platform is indeed amazing. it was a glimpse at first but today i can account for a real trade when it comes to investment on Prime Market.",
-    img: "https://Primemarkets.live/cloud/app/images/sarah (1).jpeg",
+    img: woman,
   },
   {
     id: 2,
@@ -13,7 +18,7 @@ export const test = [
     position: "System user",
     testimony:
       "I have been a full member of Prime Market for just 2 months and i can confidently testified that it has redefined my approach to trading. it is simple, support is always available and risk is minimal. Thank you fidelity Market for an amazing experience",
-    img: "https://Primemarkets.live/cloud/app/images/mattt.jpeg",
+    img: person1,
   },
   {
     id: 3,
@@ -21,7 +26,7 @@ export const test = [
     position: "principal",
     testimony:
       "After years of trial and error, few wins and many losses on various platforms. I have finally found the platform that make trading simple and reduces the risk involved.",
-    img: "https://Primemarkets.live/cloud/app/images/ranndy.jpeg",
+    img: person2,
   },
   {
     id: 4,
@@ -29,6 +34,6 @@ export const test = [
     position: "Investor",
     testimony:
       "I no longer have to worry about sustaining my trades because with fidelity Market - all i do is sit back and stakes. Trusted and legit!",
-    img: "https://Primemarkets.live/cloud/app/images/beck.jpeg",
+    img: baseball,
   },
 ];

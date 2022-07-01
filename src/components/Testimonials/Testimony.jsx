@@ -17,40 +17,38 @@ const Testimony = () => {
     <Container sx={{ mt: 3 }}>
       <Slider {...sliderSettings}>
         {test.map((t) => (
-          <Paper
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              p: 2,
-            }}
-            key={t.id}
-          >
-            <Box>
-              <Box sx={{ width: { xs: "10%", md: "6%" } }}>
-                <img src={t.img} alt="" />
+          <Paper key={t.id} sx={{ p: 2 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                p: 2,
+              }}
+            >
+              <Box sx={{ width: { xs: "10%", md: "5%" } }}>
+                <img src={t.img} style={{ borderRadius: "50%" }} alt="" />
               </Box>
-              <Typography
-                textAlign="center"
-                sx={{ fontWeight: "bold" }}
-                component="h1"
-                variant="h6"
-              >
-                {t.person}
-              </Typography>
-              <Typography
-                textAlign="center"
-                sx={{ fontWeight: "bold" }}
-                component="p"
-                variant="body1"
-                gutterBottom
-              >
-                {t.position}
-              </Typography>
-              <Typography textAlign="center" component="p" variant="subtitle1">
-                {t.testimony}
-              </Typography>
+              <Box>
+                <Typography
+                  variant="body1"
+                  textAlign="center"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  {t.person}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  textAlign="center"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  {t.position}
+                </Typography>
+                <Typography variant="subtitle1" textAlign="center">
+                  {t.testimony}
+                </Typography>
+              </Box>
             </Box>
           </Paper>
         ))}

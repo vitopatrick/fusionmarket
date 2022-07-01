@@ -14,10 +14,11 @@ const Footer = () => {
             <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
               <h3>About Us</h3>
               <p>
-                We are a US Registered company found by a group of Wall Street
-                high frequency traders. We have 30 years of combined experience
-                trading the cryptocurrency market using cutting edge machine
-                learning algorithms.
+                We provide you lasting Business investment options ranging from
+                cryptocurrencies, CFDs and other derivatives on forex to
+                registered users across the globe anytime, anywhere so as to
+                lift the future of crypto currency and digital banking with zero
+                cost.
               </p>
             </div>
             <div className="col-sm-12 col-md-2 col-lg-2 d-flex flex-column mb-3">
