@@ -11,7 +11,7 @@ export const faqs = [
   {
     id: 4,
     title: "How can i withdraw my earning balance?",
-    about: ` Miners can withdraw their mining coins. We processed withdrawals
+    about: ` Investors can withdraw their coins. We processed withdrawals
             manually so it will take more time.`,
   },
   {
