@@ -1,10 +1,14 @@
 import React from "react";
 import { FaChevronCircleRight } from "react-icons/fa";
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import "./hero.css";
 
 const Hero = () => {
+  // use the react router dom hook
+  const navigate = useNavigate();
+
   return (
     <>
       <Box
@@ -55,6 +59,7 @@ const Hero = () => {
                 endIcon={<FaChevronCircleRight />}
                 sx={{ fontSize: "18px" }}
                 size="large"
+                onClick={() => navigate("/register")}
               >
                 Get Started
               </Button>

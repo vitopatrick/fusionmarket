@@ -17,7 +17,7 @@ export const test = [
     person: "Matt Gibs",
     position: "System user",
     testimony:
-      "I have been a full member of Prime Market for just 2 months and i can confidently testified that it has redefined my approach to trading. it is simple, support is always available and risk is minimal. Thank you fidelity Market for an amazing experience",
+      "I have been a full member of Fidelity Market for just 2 months and i can confidently testified that it has redefined my approach to trading. it is simple, support is always available and risk is minimal. Thank you fidelity Market for an amazing experience",
     img: person1,
   },
   {
