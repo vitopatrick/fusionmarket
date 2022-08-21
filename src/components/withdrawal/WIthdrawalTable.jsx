@@ -1,13 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import moment from "moment";
+import WithdrawalCard from "./WithdrawalCard";
 
 // import firebase function
 import { collection, onSnapshot } from "firebase/firestore";
@@ -42,44 +36,31 @@ const WIthdrawalTable = () => {
     fetchWithdraws();
   }, [user.email]);
 
+  console.log(withdrawals);
+
   return (
-    <TableContainer component={Paper} sx={{ mt: 6 }}>
+    <>
       {withdrawals.length > 0 ? (
-        <Table sx={{ minWidth: 400 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Amount</TableCell>
-              <TableCell>Payment Mode</TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell>Date</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {withdrawals.map((withdraw, index) => (
-              <TableRow
-                key={index}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {withdraw.amount}
-                </TableCell>
-                <TableCell>{withdraw.method}</TableCell>
-                <TableCell>
-                  {withdraw.approved ? "Approved" : "Pending"}
-                </TableCell>
-                <TableCell>
-                  {moment(withdraw.date.at).format("YYYY/MM/DD")}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+        withdrawals.map((withdrawal, index) => (
+          <WithdrawalCard
+            amount={withdrawal.amount}
+            status={
+              !withdrawal.approved ? "is been processed" : "has been approved"
+            }
+            date={moment(withdrawal.date.at).format(
+              "dddd, MMMM Do YYYY, h:mm:ss a"
+            )}
+            method={withdrawal.method}
+            address={withdrawal.address}
+            key={index}
+          />
+        ))
       ) : (
         <Typography variant="body1" component="div" sx={{ p: 2 }}>
           Currently No Withdrawals
         </Typography>
       )}
-    </TableContainer>
+    </>
   );
 };
 

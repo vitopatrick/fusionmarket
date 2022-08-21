@@ -8,11 +8,7 @@ import WIthdrawalTable from "../withdrawal/WIthdrawalTable";
 
 const Panel = (props) => {
   const { children, value, index } = props;
-  return (
-    <Box sx={{ width: { xs: "50%", md: "100%" } }}>
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </Box>
-  );
+  return <Box>{value === index && <Box sx={{ p: 3 }}>{children}</Box>}</Box>;
 };
 
 const TransactionTabs = () => {
