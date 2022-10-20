@@ -135,7 +135,7 @@ const LoginForm = () => {
                 </IconButton>
               </InputAdornment>
             }
-            label="Confirm Password"
+            label="Password"
           />
         </FormControl>
         <Box>

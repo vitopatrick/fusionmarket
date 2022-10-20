@@ -120,12 +120,12 @@ const RegisterForm = () => {
         uid: user.uid,
       });
       // toast notification
-      toast.success("Welcome to Fidelity-Market Please verify your email", {
+      toast.success("Welcome to highstrike,You can now login", {
         position: "top-center",
         theme: "colored",
       });
       // redirect user to login
-      navigate("/login");
+      navigate("/auth");
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         toast("Email is already in use", {
