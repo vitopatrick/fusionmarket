@@ -17,7 +17,7 @@ import Auth from "./pages/Auth";
 export const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Auth />,
   },
   {
     path: "/about",
@@ -56,7 +56,7 @@ export const routes = createBrowserRouter([
     element: <Invest />,
   },
   {
-    path: "/wallets",
+    path: "/deposit/wallet",
     element: <Wallets />,
   },
   {
