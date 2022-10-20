@@ -9,10 +9,7 @@ import { auth, store } from "../../firebase";
 import { useNavigate, Link } from "react-router-dom";
 import "./form.css";
 import {
-  Container,
-  Paper,
   Button,
-  Typography,
   Box,
   Grid,
   TextField,
@@ -20,12 +17,17 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  OutlinedInput,
+  InputAdornment,
+  IconButton,
 } from "@mui/material";
+import { MdVisibilityOff, MdVisibility } from "react-icons/md";
 
-const Form = () => {
+const RegisterForm = () => {
   // control the input fields
   const [disable, setDisable] = useState(false);
   const [country, setCountry] = useState([]);
+  const [showPassword, setShowPassword] = useState(false);
 
   // toast configuration
   toast.configure();
@@ -40,8 +42,12 @@ const Form = () => {
   const passwordConfirmRef = useRef();
   const countryRef = useRef();
 
-  // fetch countries
+  // input functions
+  const showPasswordFn = () => {
+    setShowPassword(!showPassword);
+  };
 
+  // fetch countries
   const fetchCountry = async () => {
     try {
       const apiCall = await fetch(
@@ -146,131 +152,115 @@ const Form = () => {
   };
 
   return (
-    <Box className="form">
-      <Container maxWidth="sm" sx={{ pt: 4, pb: 8 }}>
-        <Paper sx={{ p: 2 }}>
-          <Box>
-            <Link to="/">
-              <Typography
-                variant="h4"
-                component="h1"
-                textAlign="center"
-                sx={{ fontWeight: "bold" }}
-              >
-                Fidelity-Market
-              </Typography>
-            </Link>
-          </Box>
-          <Box>
-            <Grid container columnSpacing={2} rowSpacing={1}>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  type="text"
-                  label="First Name"
-                  inputRef={firstNameRef}
-                  name="firstName"
-                  variant="filled"
-                  margin="normal"
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  type="text"
-                  label="Last Name"
-                  inputRef={LastNameRef}
-                  name="lastName"
-                  variant="filled"
-                  fullWidth
-                  margin="normal"
-                />
-              </Grid>
-            </Grid>
+    <Box sx={{ p: 2 }}>
+      <Box>
+        <Grid container columnSpacing={2} rowSpacing={1}>
+          <Grid item xs={12} md={6}>
             <TextField
-              type="email"
-              label="Enter Email"
-              inputRef={emailRef}
-              name="email"
-              variant="filled"
+              type="text"
+              label="First Name"
+              inputRef={firstNameRef}
+              name="firstName"
               margin="normal"
               fullWidth
             />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
-              type="tel"
-              label="Phone Number"
-              inputRef={phoneRef}
-              name="telephone"
+              type="text"
+              label="Last Name"
+              inputRef={LastNameRef}
+              name="lastName"
+              fullWidth
               margin="normal"
-              variant="filled"
-              fullWidth
             />
-            <Grid container columnSpacing={2} rowSpacing={1}>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  type="password"
-                  label="Password"
-                  inputRef={passwordRef}
-                  name="password"
-                  variant="filled"
-                  margin="normal"
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  type="password"
-                  label="Confirm Password"
-                  inputRef={passwordConfirmRef}
-                  name="confirmPassword"
-                  variant="filled"
-                  margin="normal"
-                  fullWidth
-                />
-              </Grid>
-            </Grid>
-            <FormControl
-              fullWidth
-              sx={{ mt: 2, mb: 4 }}
-              variant="filled"
-              disable={disable}
-            >
-              <InputLabel>Country</InputLabel>
-              <Select inputRef={countryRef} label="Select Country">
-                {country.map((count, index) => (
-                  <MenuItem value={count.main} key={index}>
-                    {count.main}
-                  </MenuItem>
-                ))}
-              </Select>
+          </Grid>
+        </Grid>
+        <TextField
+          type="email"
+          label="Enter Email"
+          inputRef={emailRef}
+          name="email"
+          margin="normal"
+          fullWidth
+        />
+        <TextField
+          type="tel"
+          label="Phone Number"
+          inputRef={phoneRef}
+          name="telephone"
+          margin="normal"
+          fullWidth
+        />
+        <Grid container columnSpacing={2} rowSpacing={1}>
+          <Grid item xs={12} md={6}>
+            <FormControl variant="outlined" fullWidth>
+              <InputLabel htmlFor="password">Password</InputLabel>
+              <OutlinedInput
+                id="password"
+                type={showPassword ? "text" : "password"}
+                inputRef={passwordRef}
+                size="small"
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={showPasswordFn}
+                      edge="end"
+                    >
+                      {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Password"
+              />
             </FormControl>
-            <Button fullWidth variant="contained" onClick={saveUser}>
-              Register
-            </Button>
-            <Box>
-              <Typography
-                variant="body1"
-                textAlign="center"
-                gutterBottom
-                component="p"
-                sx={{ mt: 2 }}
-              >
-                Already Have An Account <Link to="/login">Login</Link>
-              </Typography>
-              <Typography
-                variant="body1"
-                textAlign="center"
-                gutterBottom
-                component="p"
-                sx={{ mt: 6, mb: 2 }}
-              >
-                © Copyright 2022 Fidelity-Market All Rights Reserved.
-              </Typography>
-            </Box>
-          </Box>
-        </Paper>
-      </Container>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <FormControl variant="outlined" fullWidth>
+              <InputLabel htmlFor="password">Confirm Password</InputLabel>
+              <OutlinedInput
+                id="password"
+                type={showPassword ? "text" : "password"}
+                inputRef={passwordConfirmRef}
+                size="small"
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={showPasswordFn}
+                      edge="end"
+                    >
+                      {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Confirm Password"
+              />
+            </FormControl>
+          </Grid>
+        </Grid>
+        <FormControl fullWidth sx={{ mt: 2, mb: 4 }} disable={disable}>
+          <InputLabel>Country</InputLabel>
+          <Select inputRef={countryRef} label="Select Country" size="small">
+            {country.map((count, index) => (
+              <MenuItem value={count.main} key={index}>
+                {count.main}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <Button
+          fullWidth
+          variant="contained"
+          color="primary"
+          onClick={saveUser}
+        >
+          Register
+        </Button>
+      </Box>
     </Box>
   );
 };
 
-export default Form;
+export default RegisterForm;

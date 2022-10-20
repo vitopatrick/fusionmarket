@@ -28,7 +28,7 @@ const TradingViews = () => {
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography variant="caption" textAlign="center">
-          fidelity-market © 2022
+          Highstrike.us © 2022
         </Typography>
       </Box>
     </div>

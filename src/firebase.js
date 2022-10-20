@@ -5,15 +5,14 @@ import { getStorage } from "firebase/storage";
 
 // ? this will be hidden in an envirnoment variable
 
-// ? Your web app's Firebase configuration
+// ? web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCzHMQSQznKkvp5aRwidlurDak7ZlB8pos",
-  authDomain: "fidelitymarket-6e97e.firebaseapp.com",
-  projectId: "fidelitymarket-6e97e",
-  storageBucket: "fidelitymarket-6e97e.appspot.com",
-  messagingSenderId: "768583493113",
-  appId: "1:768583493113:web:2cb509b64b7ebf77968928",
-  measurementId: "G-CW5YLNT4Z4",
+  apiKey: "AIzaSyDI25L1Jr-4vq8ejEuu4VhgFtMkcCz_oWc",
+  authDomain: "highstrike-4fa0d.firebaseapp.com",
+  projectId: "highstrike-4fa0d",
+  storageBucket: "highstrike-4fa0d.appspot.com",
+  messagingSenderId: "535544711891",
+  appId: "1:535544711891:web:043b9eeb4288cad7fd6226"
 };
 
 // ? Initialize Firebase

@@ -1,23 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth } from "../../firebase";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
-  Container,
-  Typography,
   Box,
   Button,
   TextField,
-  Paper,
+  FormControl,
+  InputLabel,
+  OutlinedInput,
+  InputAdornment,
+  IconButton,
 } from "@mui/material";
+import { MdVisibilityOff, MdVisibility } from "react-icons/md";
 
 import "../register-form/form.css";
 
-const Form = () => {
+const LoginForm = () => {
   // navigation
   const navigate = useNavigate();
   // toast config
@@ -25,6 +28,13 @@ const Form = () => {
   // login form Ref
   const emailRef = useRef();
   const passwordRef = useRef();
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  // input functions
+  const showPasswordFn = () => {
+    setShowPassword(!showPassword);
+  };
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -97,79 +107,53 @@ const Form = () => {
   };
 
   return (
-    <Box className="form" sx={{ p: { xs: 2, md: 6 } }}>
-      <Container>
-        <Paper sx={{ p: 2 }}>
-          <Box sx={{ mt: 2 }}>
-            <Link to="/">
-              <Typography
-                variant="h4"
-                component="h1"
-                textAlign="center"
-                sx={{ fontWeight: "bold" }}
-              >
-                Fidelity-Market
-              </Typography>
-            </Link>
-          </Box>
-          <Box>
-            <TextField
-              type="email"
-              name="email"
-              margin="normal"
-              variant="filled"
-              label="Enter Email"
-              fullWidth
-              inputRef={emailRef}
-            />
-            <TextField
-              type="password"
-              name="password"
-              margin="normal"
-              variant="filled"
-              label="Password"
-              fullWidth
-              inputRef={passwordRef}
-            />
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                mt: 4,
-              }}
-            >
-              <Typography
-                variant="body1"
-                textAlign="center"
-                gutterBottom
-                component="p"
-              >
-                if you do not have an account{" "}
-                <Link to="/register">Click Here</Link> to create one.
-              </Typography>
-              <Button variant="text" color="error" onClick={resetPassword}>
-                Click to Here to Recover Password.
-              </Button>
-            </Box>
-            <Button fullWidth variant="contained" onClick={loginUser}>
-              Sign In
-            </Button>
-            <Typography
-              variant="body1"
-              textAlign="center"
-              gutterBottom
-              component="p"
-              sx={{ mt: 6 }}
-            >
-              © Copyright 2022 Fidelity-Market All Rights Reserved.
-            </Typography>
-          </Box>
-        </Paper>
-      </Container>
+    <Box sx={{ p: { xs: 2, md: 6 } }}>
+      <Box>
+        <TextField
+          type="email"
+          name="email"
+          margin="normal"
+          label="Enter Email"
+          fullWidth
+          inputRef={emailRef}
+        />
+        <FormControl variant="outlined" fullWidth>
+          <InputLabel htmlFor="password">Password</InputLabel>
+          <OutlinedInput
+            id="password"
+            type={showPassword ? "text" : "password"}
+            inputRef={passwordRef}
+            size="small"
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={showPasswordFn}
+                  edge="end"
+                >
+                  {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Confirm Password"
+          />
+        </FormControl>
+        <Box>
+          <Button
+            variant="text"
+            sx={{ color: "red" }}
+            color="error"
+            onClick={resetPassword}
+          >
+            Click to Here to Recover Password.
+          </Button>
+        </Box>
+      </Box>
+      <Button fullWidth variant="contained" color="primary" onClick={loginUser}>
+        Sign In
+      </Button>
     </Box>
   );
 };
 
-export default Form;
+export default LoginForm;

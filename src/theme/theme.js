@@ -3,6 +3,11 @@ import { createTheme } from "@mui/material/styles";
 
 // ? Create Dark & Light Theme For Website
 export const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#023020",
+    },
+  },
   typography: {
     fontFamily: ["Quicksand", "sans-serif"].join(","),
   },
@@ -12,6 +17,7 @@ export const theme = createTheme({
         root: {
           textTransform: "capitalize",
           fontWeight: "bold",
+          color: "#fff",
         },
       },
       defaultProps: {
@@ -25,16 +31,26 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: "primary",
+          fontSize: "1rem",
         },
       },
       defaultProps: {
         color: "primary",
+        size: "small",
+        variant: "outlined",
       },
     },
     MuiAppBar: {
       styleOverrides: {
         root: {
           backgroundColor: "#15202B",
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
         },
       },
     },
@@ -75,7 +91,8 @@ export const darkTheme = createTheme({
     },
     MuiTextField: {
       defaultProps: {
-        variant: "filled",
+        variant: "outlined",
+        size: "small",
       },
     },
   },

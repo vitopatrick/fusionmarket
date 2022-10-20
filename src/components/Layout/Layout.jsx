@@ -85,15 +85,9 @@ const Layout = (props) => {
             >
               <MdMenu color="#fff" />
             </IconButton>
-            <Typography
-              variant="h4"
-              noWrap
-              component="h1"
-              onClick={goHome}
-              sx={{ p: 1, color: "#ffff", cursor: "pointer" }}
-            >
-              Fidelity-Market
-            </Typography>
+            <Box>
+              <img src="/img/logo.svg" alt="logo" />
+            </Box>
           </Toolbar>
         </AppBar>
         <Box

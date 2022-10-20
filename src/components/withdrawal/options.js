@@ -1,22 +1,17 @@
 export const options = [
   {
     name: "Bitcoin",
-    minAmount: "$50",
+    minAmount: "$10",
     duration: "48hrs",
   },
   {
     name: "Ethereum",
-    minAmount: "$50",
+    minAmount: "$10",
     duration: "48hrs",
   },
   {
-    name: "Litecoin",
-    minAmount: "$50",
-    duration: "48hrs",
-  },
-  {
-    name: "Shiba",
-    minAmount: "$50",
+    name: "USDT TRC20",
+    minAmount: "$10",
     duration: "48hrs",
   },
 ];
