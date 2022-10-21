@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { auth, store } from "../../firebase";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./form.css";
 import {
   Button,
