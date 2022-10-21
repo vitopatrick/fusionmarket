@@ -13,6 +13,7 @@ import Invest from "./pages/Invest";
 import Wallets from "./pages/Wallets";
 import TransactionsPage from "./pages/TransactionsPage";
 import Auth from "./pages/Auth";
+import Refer from "./pages/Refer";
 
 export const routes = createBrowserRouter([
   {
@@ -64,8 +65,8 @@ export const routes = createBrowserRouter([
     element: <TransactionsPage />,
   },
   {
-    path: "/",
-    element: <Home />,
+    path: "/refer",
+    element: <Refer />,
   },
   {
     path: "/",

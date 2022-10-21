@@ -22,17 +22,7 @@ const WalletForm = () => {
   // configure toast component
   toast.configure();
   // methods for the select
-  const methods = [
-    "bitcoin",
-    "Ethereum",
-    "Litecoin",
-    "USDT",
-    "BNB",
-    "DOGE",
-    "TRON",
-    "SHIBA",
-    "BITCOIN CASH",
-  ];
+  const methods = ["bitcoin", "Ethereum", "Bank Transfer", "USDT"];
 
   // ref to control the form
   const fileRef = useRef();

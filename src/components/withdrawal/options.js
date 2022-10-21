@@ -14,4 +14,9 @@ export const options = [
     minAmount: "$10",
     duration: "48hrs",
   },
+  {
+    name: "Bank Transfer",
+    minAmount: "$10",
+    duration: "48hrs",
+  },
 ];

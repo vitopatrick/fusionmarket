@@ -110,7 +110,7 @@ const RegisterForm = () => {
         country: countryRef.current.value,
         balance: 0,
         profit: 0,
-        bonus: 0,
+        bonus: 20,
         deposited: 0,
         refBonus: 0,
         totalPackages: 0,

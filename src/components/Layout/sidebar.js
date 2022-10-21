@@ -5,6 +5,7 @@ import {
   MdDownload,
   MdCreditScore,
   MdBusinessCenter,
+  MdRecycling,
 } from "react-icons/md";
 
 export const links = [
@@ -37,5 +38,10 @@ export const links = [
     text: "Transactions",
     path: "/transactions",
     icon: <MdBusinessCenter />,
+  },
+  {
+    text: "Refer Users",
+    path: "/refer",
+    icon: <MdRecycling />,
   },
 ];

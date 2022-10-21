@@ -14,6 +14,7 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import { MdMenu, MdPowerOff } from "react-icons/md";
+import { FaUserCircle } from "react-icons/fa";
 import { links } from "./sidebar";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
@@ -70,7 +71,7 @@ const Layout = (props) => {
             ml: { sm: `${drawerWidth}px` },
           }}
         >
-          <Toolbar>
+          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -82,6 +83,11 @@ const Layout = (props) => {
             </IconButton>
             <Box>
               <img src="/img/logo.svg" alt="logo" />
+            </Box>
+            <Box>
+              <IconButton onClick={() => navigate("/account")}>
+                <FaUserCircle />
+              </IconButton>
             </Box>
           </Toolbar>
         </AppBar>

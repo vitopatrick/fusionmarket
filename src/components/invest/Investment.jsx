@@ -62,37 +62,61 @@ const Investment = () => {
               <Paper sx={{ p: 2 }}>
                 <Box>
                   <Typography
-                    textAlign="center"
+                    sx={{ fontWeight: "bold" }}
                     variant="h6"
                     gutterBottom
                     component="div"
                   >
                     {plan.title}
                   </Typography>
-                  <Typography
-                    variant="h4"
-                    component="div"
-                    textAlign="center"
-                    gutterBottom
-                  >
-                    {plan.price}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    component="div"
-                    textAlign="center"
-                  >
-                    Duration : {plan.Duration}
-                  </Typography>
+                  <Box sx={{ display: "flex", alignItems: "center", my: 2 }}>
+                    <sub>$</sub>
+                    <Typography
+                      variant="h4"
+                      component="div"
+                      gutterBottom
+                      sx={{ fontWeight: "bold" }}
+                    >
+                      {plan.price}
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                      Features
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      component="div"
+                      gutterBottom
+                      sx={{ my: 2 }}
+                    >
+                      Duration : {plan.Duration}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      component="div"
+                      gutterBottom
+                      sx={{ my: 2 }}
+                    >
+                      Minimum Withdrawal : $10
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      component="div"
+                      gutterBottom
+                      sx={{ my: 2 }}
+                    >
+                      Portfoilo Tracker
+                    </Typography>
+                  </Box>
                 </Box>
                 <Box sx={{ mt: 2, mb: 2 }}>
                   <Button
                     color="primary"
-                    variant="outlined"
                     fullWidth
                     onClick={() => addInvestment(plan.min, plan.title)}
                   >
-                    Invest Now !!
+                    Get Started !!
                   </Button>
                 </Box>
               </Paper>

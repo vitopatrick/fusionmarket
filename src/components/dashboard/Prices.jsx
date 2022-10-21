@@ -7,6 +7,7 @@ import {
   FaCreditCard,
   FaEnvelope,
   FaEnvelopeOpen,
+  FaUsers,
 } from "react-icons/fa";
 // import Firebase functions
 import { getDoc, doc } from "firebase/firestore";
@@ -95,7 +96,7 @@ const Prices = () => {
             <Skeleton variant="rectangular" width="100%" height={90} />
           )}
         </Grid>
-        {/* <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={3}>
           {details ? (
             <Paper sx={{ p: 2 }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -113,7 +114,7 @@ const Prices = () => {
           ) : (
             <Skeleton variant="rectangular" width="100%" height={90} />
           )}
-        </Grid> */}
+        </Grid>
         <Grid item xs={12} md={3}>
           {details ? (
             <Paper sx={{ p: 2 }}>
