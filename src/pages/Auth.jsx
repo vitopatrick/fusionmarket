@@ -1,7 +1,7 @@
 import { Container, Paper, Box, Tab, Tabs, Typography } from "@mui/material";
 import { outerBox, paperStyle, imgBox, alignItems } from "../style/authStyle";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RegisterForm from "../components/register-form/Form";
 import LoginForm from "../components/login-form/Form";
 
@@ -27,6 +27,13 @@ const Auth = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "//code.tidio.co/8hgwgjzxz8ywpe2hcigymmlzh1ihm6ni.js";
+    document.body.append(script);
+  }, []);
 
   return (
     <Box sx={outerBox}>

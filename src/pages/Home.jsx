@@ -20,7 +20,7 @@ const Home = () => {
     }
     const script = document.createElement("script");
     (script.async = true),
-      (script.src = "//code.jivosite.com/widget/kcPDlcDu6W");
+      (script.src = "//code.tidio.co/8hgwgjzxz8ywpe2hcigymmlzh1ihm6ni.js");
     document.body.append(script);
   }, []);
 
