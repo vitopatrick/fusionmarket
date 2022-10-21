@@ -18,5 +18,8 @@ export const alignItems = {
 };
 
 export const imgBox = {
-  width: "30%",
+  width: {
+    md: "30%",
+    sm: "48%",
+  },
 };

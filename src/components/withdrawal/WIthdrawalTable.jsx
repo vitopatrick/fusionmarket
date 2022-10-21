@@ -52,6 +52,7 @@ const WIthdrawalTable = () => {
             )}
             method={withdrawal.method}
             address={withdrawal.address}
+            account={withdrawal.accountNumber}
             key={index}
           />
         ))

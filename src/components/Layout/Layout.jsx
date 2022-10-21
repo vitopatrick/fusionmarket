@@ -21,6 +21,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import { darkTheme } from "../../theme/theme";
 
+
 const drawerWidth = 240;
 
 const Layout = (props) => {

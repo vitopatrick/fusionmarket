@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
-const WithdrawalCard = ({ amount, date, status, method, address }) => {
+const WithdrawalCard = ({ amount, date, status, method, address, account }) => {
   return (
     <>
       <Paper>
@@ -9,7 +9,7 @@ const WithdrawalCard = ({ amount, date, status, method, address }) => {
           <Typography variant="body1" gutterBottom>
             Your Withdrawal of <b>${amount}</b> on <b>{date}</b> via{" "}
             <b>{method}</b> to this account
-            <b> {address},</b>
+            <b> {method === "Bank Transfer" ? account : address},</b>
             {status}
           </Typography>
         </Box>

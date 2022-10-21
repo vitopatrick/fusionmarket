@@ -6,6 +6,7 @@ import {
   MdCreditScore,
   MdBusinessCenter,
   MdRecycling,
+  MdHeadset,
 } from "react-icons/md";
 
 export const links = [
@@ -23,6 +24,11 @@ export const links = [
     text: "Fund Wallet",
     path: "/deposit",
     icon: <MdPayment />,
+  },
+  {
+    text: "Support",
+    path: "/support",
+    icon: <MdHeadset />,
   },
   {
     text: "Invest",

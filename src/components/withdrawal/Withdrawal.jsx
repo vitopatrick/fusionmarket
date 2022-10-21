@@ -24,6 +24,9 @@ const Withdrawal = () => {
   // form state
   const addressRef = useRef();
   const withdrawalAmtRef = useRef();
+  const bankNameRef = useRef();
+  const accountNameRef = useRef();
+  const accountNumberRef = useRef();
   const [value, setValue] = useState("");
   // function to set modal open and close
   const [open, setOpen] = useState(false);
@@ -51,13 +54,25 @@ const Withdrawal = () => {
         `/${user.email}`,
         "withdrawal"
       );
-      await addDoc(collectionRef, {
-        amount: withdrawalAmtRef.current.value,
-        date: serverTimestamp(),
-        address: addressRef.current.value,
-        approved: false,
-        method: value,
-      });
+      if (value === "Bank Transfer") {
+        await addDoc(collectionRef, {
+          amount: withdrawalAmtRef.current.value,
+          date: serverTimestamp(),
+          bankName: bankNameRef.current.value,
+          approved: false,
+          method: value,
+          accountName: accountNameRef.current.value,
+          accountNumber: accountNumberRef.current.value,
+        });
+      } else {
+        await addDoc(collectionRef, {
+          amount: withdrawalAmtRef.current.value,
+          date: serverTimestamp(),
+          address: addressRef.current.value,
+          approved: false,
+          method: value,
+        });
+      }
 
       toast.success("Order Sent", { theme: "colored", position: "top-center" });
 
@@ -143,27 +158,61 @@ const Withdrawal = () => {
               variant="body1"
               component="h2"
             >
-              Payment will be sent through your selected method.
+              Payment will be sent via {value}.
             </Typography>
             <Divider />
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <TextField
-                label="Enter Address"
-                sx={{ mt: 5, mb: 3 }}
-                inputRef={addressRef}
-              />
-              <TextField
-                sx={{ mb: 3 }}
-                label="Enter Amount"
-                inputRef={withdrawalAmtRef}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={withdrawMethod}
-              >
-                Submit
-              </Button>
+              {value === "Bank Transfer" ? (
+                <>
+                  <TextField
+                    label="Enter Bank Name"
+                    sx={{ mt: 5, mb: 3 }}
+                    inputRef={bankNameRef}
+                  />
+                  <TextField
+                    sx={{ mb: 3 }}
+                    label="Enter Account Name"
+                    inputRef={accountNameRef}
+                  />
+                  <TextField
+                    sx={{ mb: 3 }}
+                    label="Enter Account Number"
+                    inputRef={accountNumberRef}
+                  />
+                  <TextField
+                    sx={{ mb: 3 }}
+                    label="Enter Amount"
+                    inputRef={withdrawalAmtRef}
+                  />
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={withdrawMethod}
+                  >
+                    Submit
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <TextField
+                    label="Enter Address"
+                    sx={{ mt: 5, mb: 3 }}
+                    inputRef={addressRef}
+                  />
+                  <TextField
+                    sx={{ mb: 3 }}
+                    label="Enter Amount"
+                    inputRef={withdrawalAmtRef}
+                  />
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={withdrawMethod}
+                  >
+                    Submit
+                  </Button>
+                </>
+              )}
             </Box>
           </Box>
         </Fade>

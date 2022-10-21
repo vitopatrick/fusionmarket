@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // ? Import Pages or Routes
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -14,6 +14,7 @@ import Wallets from "./pages/Wallets";
 import TransactionsPage from "./pages/TransactionsPage";
 import Auth from "./pages/Auth";
 import Refer from "./pages/Refer";
+import Support from "./pages/Support";
 
 export const routes = createBrowserRouter([
   {
@@ -69,15 +70,7 @@ export const routes = createBrowserRouter([
     element: <Refer />,
   },
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/",
-    element: <Home />,
+    path: "/support",
+    element: <Support />,
   },
 ]);

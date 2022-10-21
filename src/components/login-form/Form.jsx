@@ -15,6 +15,7 @@ import {
   OutlinedInput,
   InputAdornment,
   IconButton,
+  Typography,
 } from "@mui/material";
 import { MdVisibilityOff, MdVisibility } from "react-icons/md";
 
@@ -138,15 +139,10 @@ const LoginForm = () => {
             label="Password"
           />
         </FormControl>
-        <Box>
-          <Button
-            variant="text"
-            sx={{ color: "red" }}
-            color="error"
-            onClick={resetPassword}
-          >
+        <Box sx={{ my: 2, cursor: "pointer" }}>
+          <Typography variant="body2" color="gray" onClick={resetPassword}>
             Click to Here to Recover Password.
-          </Button>
+          </Typography>
         </Box>
       </Box>
       <Button fullWidth variant="contained" color="primary" onClick={loginUser}>
