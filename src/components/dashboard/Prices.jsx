@@ -48,8 +48,8 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Deposited</Typography>
-                  <Typography variant="subtitle1">{`$${details.deposited.toFixed(
-                    2
+                  <Typography variant="subtitle1">{`$${details.deposited.toLocaleString(
+                    "en-US"
                   )}`}</Typography>
                 </Box>
               </Box>
@@ -67,8 +67,8 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Profit</Typography>
-                  <Typography variant="subtitle1">{`$${details.profit.toFixed(
-                    2
+                  <Typography variant="subtitle1">{`$${details.profit.toLocaleString(
+                    "en-US"
                   )}`}</Typography>
                 </Box>
               </Box>
@@ -86,8 +86,8 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Bonus</Typography>
-                  <Typography variant="subtitle1">{`$${details.bonus.toFixed(
-                    2
+                  <Typography variant="subtitle1">{`$${details.bonus.toLocaleString(
+                    "en-US"
                   )}`}</Typography>
                 </Box>
               </Box>
@@ -105,8 +105,8 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Ref. Bonus</Typography>
-                  <Typography variant="subtitle1">{`$${details.refBonus.toFixed(
-                    2
+                  <Typography variant="subtitle1">{`$${details.refBonus.toLocaleString(
+                    "en-US"
                   )}`}</Typography>
                 </Box>
               </Box>
@@ -124,8 +124,8 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Balance</Typography>
-                  <Typography variant="subtitle1">{`$${details.balance.toFixed(
-                    2
+                  <Typography variant="subtitle1">{`$${details.balance.toLocaleString(
+                    "en-US"
                   )}`}</Typography>
                 </Box>
               </Box>
