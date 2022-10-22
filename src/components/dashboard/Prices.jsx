@@ -50,7 +50,7 @@ const Prices = () => {
                   <Typography variant="body1">Deposited</Typography>
                   <Typography variant="subtitle1">{`$${details.deposited.toLocaleString(
                     "en-US"
-                  )}`}</Typography>
+                  )}.00`}</Typography>
                 </Box>
               </Box>
             </Paper>
@@ -69,7 +69,7 @@ const Prices = () => {
                   <Typography variant="body1">Profit</Typography>
                   <Typography variant="subtitle1">{`$${details.profit.toLocaleString(
                     "en-US"
-                  )}`}</Typography>
+                  )}.00`}</Typography>
                 </Box>
               </Box>
             </Paper>
@@ -88,7 +88,7 @@ const Prices = () => {
                   <Typography variant="body1">Bonus</Typography>
                   <Typography variant="subtitle1">{`$${details.bonus.toLocaleString(
                     "en-US"
-                  )}`}</Typography>
+                  )}.00`}</Typography>
                 </Box>
               </Box>
             </Paper>
@@ -107,7 +107,7 @@ const Prices = () => {
                   <Typography variant="body1">Ref. Bonus</Typography>
                   <Typography variant="subtitle1">{`$${details.refBonus.toLocaleString(
                     "en-US"
-                  )}`}</Typography>
+                  )}.00`}</Typography>
                 </Box>
               </Box>
             </Paper>
@@ -126,7 +126,7 @@ const Prices = () => {
                   <Typography variant="body1">Balance</Typography>
                   <Typography variant="subtitle1">{`$${details.balance.toLocaleString(
                     "en-US"
-                  )}`}</Typography>
+                  )}.00`}</Typography>
                 </Box>
               </Box>
             </Paper>
