@@ -48,7 +48,10 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Deposited</Typography>
-                  <Typography variant="subtitle1">{`$${details.deposited.toLocaleString(
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: "bold" }}
+                  >{`$${details.deposited.toLocaleString(
                     "en-US"
                   )}.00`}</Typography>
                 </Box>
@@ -67,7 +70,10 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Profit</Typography>
-                  <Typography variant="subtitle1">{`$${details.profit.toLocaleString(
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: "bold" }}
+                  >{`$${details.profit.toLocaleString(
                     "en-US"
                   )}.00`}</Typography>
                 </Box>
@@ -86,9 +92,10 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Bonus</Typography>
-                  <Typography variant="subtitle1">{`$${details.bonus.toLocaleString(
-                    "en-US"
-                  )}.00`}</Typography>
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: "bold" }}
+                  >{`$${details.bonus.toLocaleString("en-US")}.00`}</Typography>
                 </Box>
               </Box>
             </Paper>
@@ -105,7 +112,10 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Ref. Bonus</Typography>
-                  <Typography variant="subtitle1">{`$${details.refBonus.toLocaleString(
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: "bold" }}
+                  >{`$${details.refBonus.toLocaleString(
                     "en-US"
                   )}.00`}</Typography>
                 </Box>
@@ -124,7 +134,10 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Balance</Typography>
-                  <Typography variant="subtitle1">{`$${details.balance.toLocaleString(
+                  <Typography
+                    variant="subtitle1"
+                    sx={{ fontWeight: "bold" }}
+                  >{`$${details.balance.toLocaleString(
                     "en-US"
                   )}.00`}</Typography>
                 </Box>
@@ -143,7 +156,7 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Total Package</Typography>
-                  <Typography variant="subtitle1">
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                     {details.totalPackages}
                   </Typography>
                 </Box>
@@ -162,7 +175,7 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Active Packages</Typography>
-                  <Typography variant="subtitle1">
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
                     {details.activePackages}
                   </Typography>
                 </Box>
