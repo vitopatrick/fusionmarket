@@ -105,7 +105,12 @@ const Withdrawal = () => {
             <Grid item xs={12} md={3} key={option.name}>
               <Card>
                 <CardContent>
-                  <Box>
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Box sx={{ width: "12%" }}>
+                      <img src={option.icon} alt={option.name} />
+                    </Box>
                     <Typography variant="h6" component="div">
                       {option.name}
                     </Typography>
