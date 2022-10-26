@@ -17,7 +17,6 @@ export const theme = createTheme({
         root: {
           textTransform: "capitalize",
           fontWeight: "bold",
-          color: "#fff",
         },
       },
       defaultProps: {
@@ -43,7 +42,7 @@ export const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: "#15202B",
+          backgroundColor: "#fff",
         },
       },
     },
@@ -93,6 +92,35 @@ export const darkTheme = createTheme({
       defaultProps: {
         variant: "outlined",
         size: "small",
+      },
+    },
+  },
+});
+
+export const landingPageTheme = createTheme({
+  palette: {},
+  typography: {
+    fontFamily: ["Roboto", "sans-serif"].join(","),
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+        },
+      },
+      defaultProps: {
+        disableRipple: true,
+        disableElevation: true,
+        variant: "contained",
+      },
+    },
+
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#fff",
+        },
       },
     },
   },

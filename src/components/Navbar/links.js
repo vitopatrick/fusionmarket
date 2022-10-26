@@ -7,26 +7,16 @@ export const links = [
   {
     id: 2,
     path: "/about",
-    title: "About",
+    title: "About Us",
   },
   {
     id: 3,
-    path: "/contact",
-    title: "Contact",
+    path: "/blog",
+    title: "blog",
   },
   {
     id: 4,
-    path: "#pricing",
-    title: "Price",
-  },
-  {
-    id: 5,
-    path: "/login",
-    title: "Sign In",
-  },
-  {
-    id: 6,
-    path: "/terms",
-    title: "Terms & Conditions",
+    path: "/alphatpass",
+    title: "AlphaPass",
   },
 ];

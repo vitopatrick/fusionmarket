@@ -7,19 +7,36 @@ const About = () => {
     <React.Fragment>
       <Box sx={{ mt: 6 }}>
         <Box>
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
             <Typography
-              variant="h4"
-              component="h2"
+              variant="body1"
               textAlign="center"
               gutterBottom
-              sx={{ fontWeight: "bold" }}
+              sx={{
+                color: "#7ed957",
+                fontSize: "0.6rem",
+                backgroundColor: "#f5f7fe",
+                borderRadius: 2,
+                p: 1,
+                display: "inline-block",
+              }}
             >
-              ABOUT FIDELITY-MARKET
+              HIGHSTRIKE
             </Typography>
-            <Typography variant="body1" component="p" textAlign="center">
-              fidelity-market is your no 1 cryptocurrency investment portfolio
-              management system
+            <Typography
+              variant="h4"
+              component="p"
+              textAlign="center"
+              sx={{ color: "#1f4d0b", fontStyle: "italics" }}
+            >
+              How it Works:
             </Typography>
           </Box>
           <Container sx={{ mt: 3 }}>
@@ -33,6 +50,7 @@ const About = () => {
                       flexDirection: "column",
                       alignItems: "center",
                     }}
+                    elevation={0}
                   >
                     <Box sx={{ width: { xs: "10%", md: "20%" } }}>
                       <img src={about.img} alt={about.title} />

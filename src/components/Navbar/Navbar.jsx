@@ -13,49 +13,87 @@ const Navbar = () => {
   };
   return (
     <React.Fragment>
-      <AppBar position="static">
+      <AppBar position="static" elevation={0}>
         <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            p: 2,
-          }}
+          sx={{ p: 2, display: "flex", justifyContent: "space-between" }}
         >
           <Link to="/">
             <Box>
-              <Typography
-                variant="h4"
-                component="h1"
-                sx={{ color: "#fff", fontWeight: "bold" }}
-              >
-                Fidelity-Market
-              </Typography>
+              <img src="/img/logo.svg" alt="highstrike logo" />
             </Box>
           </Link>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {links.map((link) => (
               <Typography variant="body1" component="p" sx={{ mr: 5 }}>
-                <Link to={link.path} key={link.id} style={{ color: "#fff" }}>
+                <Link
+                  to={link.path}
+                  key={link.id}
+                  style={{ color: "#7ed957", fontWeight: "bold" }}
+                >
                   {link.title}
                 </Link>
               </Typography>
             ))}
           </Box>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <Link to="/register">
-              <Button variant="outlined" color="warning" size="large">
-                Get Started
+            <Link to="/auth">
+              <Button
+                sx={{
+                  borderRadius: 5,
+                  px: 4,
+                  backgroundColor: "#fff",
+                  color: "#7ed957",
+                  "&:hover": {
+                    backgroundColor: "#7ed957",
+                    color: "#fff",
+                  },
+                }}
+              >
+                LOGIN
+              </Button>
+            </Link>
+            <Link to="/auth">
+              <Button
+                sx={{
+                  borderRadius: 5,
+                  px: 3,
+                  py: 1,
+                  color: "#7ed957",
+                  backgroundColor: "#fff",
+                  "&:hover": {
+                    backgroundColor: "#7ed957",
+                    color: "#fff",
+                  },
+                }}
+              >
+                SIGN UP
               </Button>
             </Link>
           </Box>
           <Box className="bars">
-            <FaBars className="bars" size="20px" onClick={toggle} />
+            <FaBars size="20px" color="#000000" onClick={toggle} />
           </Box>
         </Toolbar>
         <Box className={active ? "sidenav active" : "sidenav"}>
-          <Box sx={{ ml: 3, mt: 1 }}>
-            <FaTimes className="bars" size="20px" onClick={toggle} />
+          <Box
+            sx={{
+              ml: 3,
+              mt: 1,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Box sx={{ width: "30%" }}>
+              <img
+                src="https://highstrike.com/wp-content/themes/highstrike/assets/images/footer-logo.svg"
+                alt="logo"
+              />
+            </Box>
+            <Box sx={{ display: "flex" }}>
+              CLOSE
+              <FaTimes className="bars" size="20px" onClick={toggle} />
+            </Box>
           </Box>
           <Box sx={{ p: 3 }}>
             {links.map((link) => (
@@ -65,11 +103,42 @@ const Navbar = () => {
                 </Link>
               </Typography>
             ))}
-            <Link to="/register">
-              <Button fullWidth variant="outlined" color="warning">
-                Get Started
-              </Button>
-            </Link>
+            <Box>
+              <Link to="/auth">
+                <Button
+                  sx={{
+                    borderRadius: 5,
+                    px: 4,
+                    backgroundColor: "#fff",
+                    color: "#7ed957",
+                    "&:hover": {
+                      backgroundColor: "#7ed957",
+                      color: "#fff",
+                    },
+                  }}
+                >
+                  LOGIN
+                </Button>
+              </Link>
+              <Link to="/auth">
+                <Button
+                  sx={{
+                    borderRadius: 5,
+                    px: 3,
+                    py: 1,
+                    color: "#7ed957",
+                    mx: 2,
+                    backgroundColor: "#fff",
+                    "&:hover": {
+                      backgroundColor: "#7ed957",
+                      color: "#fff",
+                    },
+                  }}
+                >
+                  SIGN UP
+                </Button>
+              </Link>
+            </Box>
           </Box>
         </Box>
       </AppBar>

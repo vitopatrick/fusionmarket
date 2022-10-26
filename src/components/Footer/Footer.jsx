@@ -1,70 +1,250 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { IconContext } from "react-icons";
-// import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import moment from "moment";
+import {
+  Box,
+  Container,
+  Divider,
+  Grid,
+  IconButton,
+  Typography,
+} from "@mui/material";
+import { FaChevronRight, FaInstagram, FaTwitter } from "react-icons/fa";
 import "./footer.css";
 
 const Footer = () => {
   return (
-    <IconContext.Provider value={{ color: "#f4f4f4", size: "2.4rem" }}>
-      <footer className="footer">
-        <div className="container d-flex flex-column">
-          <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
-              <h3>About Us</h3>
-              <p>
-                We provide you lasting Business investment options ranging from
-                cryptocurrencies, CFDs and other derivatives on forex to
-                registered users across the globe anytime, anywhere so as to
-                lift the future of crypto currency and digital banking with zero
-                cost.
-              </p>
-            </div>
-            <div className="col-sm-12 col-md-2 col-lg-2 d-flex flex-column mb-3">
-              <h3>Quick Links</h3>
-              <Link to="/" className="text-white my-1 text-sec">
-                Home
+    <Box sx={{ backgroundColor: "#2e5f18", p: 3 }} className="footer">
+      <Container>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={3}>
+            <Box>
+              <Link to="/">
+                <Box
+                  sx={{
+                    width: { xs: "40%" },
+                  }}
+                  s
+                >
+                  <img
+                    src="https://highstrike.com/wp-content/themes/highstrike/assets/images/footer-logo.svg"
+                    alt="logo"
+                  />
+                </Box>
+                <Typography
+                  gutterBottom
+                  sx={{ color: "#fff", fontWeight: "bold" }}
+                >
+                  Support
+                </Typography>
+                <Typography sx={{ color: "#fff" }}>
+                  support@highstrike.us
+                </Typography>
               </Link>
-              <Link to="/about" className="text-white my-1 text-sec">
-                About
-              </Link>
-              <Link to="/contact" className="text-white my-1 text-sec">
-                Contact
-              </Link>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
-              <h3>Contact Info</h3>
-              <p>support@fidelityMarket.com</p>
-              <p>Atlanta,Georgia United States</p>
-            </div>
-          </div>
-          {/* <div className="footer__links">
-            <div className="footer__media">
-              <a href="https://www.facebook.com">
-                <FaFacebookF />
-              </a>
-            </div>
-            <div className="footer__media">
-              <a href="https://www.twitter.com">
-                <FaTwitter />
-              </a>
-            </div>
-            <div className="footer__media">
-              <a href="https://www.instagram.com">
-                <FaInstagram />
-              </a>
-            </div>
-          </div> */}
-          <div className="text-center mt-3">
-            <p>
-              COPYRIGHT © RESVERED Fidelity-Market 2014 -{" "}
-              {moment(new Date()).format("YYYY")}
-            </p>
-          </div>
-        </div>
-      </footer>
-    </IconContext.Provider>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Box>
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: "1.2rem",
+                  color: "#ffffff",
+                  mb: 4,
+                }}
+              >
+                Navigation
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link
+                  to="/"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Blog
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  AlphaPass
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  HSX
+                </Link>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Box>
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: "1.2rem",
+                  color: "#ffffff",
+                  mb: 4,
+                }}
+              >
+                Quick Links
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Terms of Use
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Refund Policy
+                </Link>
+                <Link
+                  to="#"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  FAQ
+                </Link>
+                <Link
+                  to="/auth"
+                  style={{
+                    marginTop: "0.5rem",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Login
+                </Link>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Box>
+              <Box>
+                <Typography sx={{ fontWeight: "bold", color: "#fff", mb: 2 }}>
+                  Follow Us
+                </Typography>
+                <Box>
+                  <FaTwitter color="#fff" style={{ marginRight: "0.4rem" }} />
+                  <FaInstagram color="#fff" />
+                </Box>
+              </Box>
+              <Box>
+                <Typography sx={{ fontWeight: "bold", color: "#fff", my: 2 }}>
+                  Subscribe
+                </Typography>
+                <Box>
+                  <input
+                    type="email"
+                    placholder="Your Email"
+                    className="input"
+                  />
+
+                  <IconButton
+                    sx={{
+                      backgroundColor: "#0d6efd",
+                      "&:hover": {
+                        backgroundColor: "#0d6efd",
+                      },
+                    }}
+                  >
+                    <FaChevronRight color="#fff" />
+                  </IconButton>
+                </Box>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+        <Divider sx={{ color: "#fff", mt: 4 }} />
+        <Box>
+          <Typography
+            variant="body1"
+            textAlign="center"
+            sx={{ mt: 5, mb: 2, color: "#fff" }}
+          >
+            © Copyright 2022. HighStrike Inc.
+          </Typography>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 

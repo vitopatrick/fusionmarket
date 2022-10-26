@@ -21,17 +21,9 @@ const Testimonials = () => {
             gutterBottom
             sx={{ fontWeight: "bold" }}
           >
-            Testimonials
-          </Typography>
-          <Divider />
-          <Typography variant="body1" component="p" textAlign="center">
-            Don't take our word for it, here's what some of our clients have to
-            say about us
+            Loved by Thousands of Traders Worldwide
           </Typography>
         </Box>
-      </Box>
-      <Box>
-        <Testimony />
       </Box>
     </>
   );

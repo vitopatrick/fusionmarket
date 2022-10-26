@@ -1,11 +1,8 @@
 import React from "react";
-import { FaChevronCircleRight } from "react-icons/fa";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import "./hero.css";
-
-const Hero = () => {
+const Member = () => {
   // const styles = {
   //   outerBox:
   // };
@@ -23,6 +20,7 @@ const Hero = () => {
           borderRadius: 2,
           padding: 3,
           position: "relative",
+          backgroundColor: "#f5f7fe",
         }}
       >
         <Box
@@ -31,7 +29,7 @@ const Hero = () => {
             justifyContent: "space-between",
             alignItems: "center",
             flexDirection: {
-              xs: "column",
+              xs: "column-reverse",
               md: "row",
             },
             zIndex: "999",
@@ -51,13 +49,13 @@ const Hero = () => {
                   fontWeight: "bold",
                 }}
               >
-                LAUNCH DISCOUNT LIVE
+                START TODAY
               </Typography>
               <Typography
                 variant="h2"
                 sx={{ color: "black", fontWeight: "700", my: 4 }}
               >
-                HIGHSTRIKE
+                Become a Member
               </Typography>
               <Typography
                 variant="body1"
@@ -107,27 +105,9 @@ const Hero = () => {
               </Typography>
             </Box>
           </Box>
-          <Box
-            sx={{
-              zIndex: "999",
-            }}
-          >
+          <Box>
             <img
-              src="https://highstrike.com/wp-content/uploads/2022/06/banner-mobile-img.png"
-              alt="phone"
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "0",
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <img
-              src="https://highstrike.com/wp-content/uploads/2022/06/banner-bg.png"
+              src="https://highstrike.com/wp-content/uploads/2022/06/become-member-img1.png"
               alt="phone"
             />
           </Box>
@@ -137,7 +117,4 @@ const Hero = () => {
   );
 };
 
-
-
-
-export default Hero;
+export default Member;

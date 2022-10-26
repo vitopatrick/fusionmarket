@@ -6,30 +6,30 @@ import secure from "../../img/secure.png";
 export const about = [
   {
     id: 1,
-    title: "WE INNOVATE",
-    img: innovate,
+    title: "Signals",
+    img: "https://highstrike.com/wp-content/uploads/2022/06/colored-signal-icon.svg",
     about:
-      "It pays to Invest. earn efficiently with Crypto currency on our platform with a high return rates using our verified crypto network",
+      "Let our team of professional traders walk you through your trades every day.",
   },
   {
     id: 2,
-    title: "INVEST",
-    img: invest,
+    title: "Training",
+    img: "https://highstrike.com/wp-content/uploads/2022/06/colored-training-icon.svg",
     about:
-      "Zero can never be an option. Keep the Dollars away - invest in real Trade and sit back with ease while we work the market for you.",
+      "We make it easy to navigate our platform with step-by-step video tutorials.",
   },
   {
     id: 3,
-    title: "SUPPORT",
-    img: secure,
+    title: "Live",
+    img: "https://highstrike.com/wp-content/uploads/2022/06/colored-live-icon.svg",
     about:
-      "You are not alone. We've prepared a standard support system to help you put things in order.",
+      "Get on live calls with our analysts as they break down their watches, & ask questions in real time.",
   },
   {
     id: 4,
-    title: "SAVINGS AND INVESTMENT",
-    img: proof,
+    title: "Social",
+    img: "https://highstrike.com/wp-content/uploads/2022/06/colored-social-icon.svg",
     about:
-      "There are many investors running with us on the same track. we are trying to keep a pace, Come join us and invest.",
+      "Join our social media ecosystem, customize your profile, post your insights and content & grow your following.",
   },
 ];
