@@ -16,7 +16,7 @@ const Hero = () => {
             sm: "100%",
           },
           mx: "auto",
-          my: 6,
+          my: 2,
           borderRadius: 2,
           padding: 3,
           position: "relative",
@@ -31,7 +31,6 @@ const Hero = () => {
               xs: "column",
               md: "row",
             },
-            zIndex: "999",
           }}
         >
           <Box>
@@ -123,6 +122,10 @@ const Hero = () => {
               left: 0,
               width: "100%",
               height: "100%",
+              zIndex: {
+                xs: -2,
+                md: 0,
+              },
             }}
           >
             <img
