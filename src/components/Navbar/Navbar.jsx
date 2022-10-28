@@ -15,7 +15,7 @@ const Navbar = () => {
     <React.Fragment>
       <AppBar position="static" elevation={0}>
         <Toolbar
-          sx={{ p: 2, display: "flex", justifyContent: "space-between" }}
+          sx={{ p: 1, display: "flex", justifyContent: "space-between" }}
         >
           <Link to="/">
             <Box>
@@ -91,8 +91,7 @@ const Navbar = () => {
               />
             </Box>
             <Box sx={{ display: "flex" }}>
-              CLOSE
-              <FaTimes className="bars" size="20px" onClick={toggle} />
+              CLOSE <FaTimes className="bars" size="20px" onClick={toggle} />
             </Box>
           </Box>
           <Box sx={{ p: 3 }}>
