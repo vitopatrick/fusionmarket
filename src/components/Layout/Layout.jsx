@@ -11,7 +11,6 @@ import {
   ListItemText,
   Toolbar,
   CssBaseline,
-  ThemeProvider,
 } from "@mui/material";
 import { MdMenu, MdPowerOff } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
@@ -19,8 +18,7 @@ import { links } from "./sidebar";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import { darkTheme } from "../../theme/theme";
-
+import LightDark from "../toggle/LightDark";
 
 const drawerWidth = 240;
 
@@ -62,7 +60,7 @@ const Layout = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <>
       <Box sx={{ display: "flex", bgcolor: "background.default" }}>
         <CssBaseline />
         <AppBar
@@ -85,7 +83,8 @@ const Layout = (props) => {
             <Box>
               <img src="/img/logo.svg" alt="logo" />
             </Box>
-            <Box>
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <LightDark />
               <IconButton onClick={() => navigate("/account")}>
                 <FaUserCircle />
               </IconButton>
@@ -162,7 +161,7 @@ const Layout = (props) => {
           {props.children}
         </Box>
       </Box>
-    </ThemeProvider>
+    </>
   );
 };
 

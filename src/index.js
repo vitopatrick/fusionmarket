@@ -7,25 +7,25 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
-
 // ? Import the react router dom
-import { RouterProvider  } from "react-router-dom";
-import { routes } from './routes'
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
 
 // ? Imports from material ui
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme/theme";
 
-
 // ? Import the user context that will Cover the applications and control authentication state
 import UserProvider from "./context/UserContext";
+import ThemeChanger from "./context/themeContext";
 
 ReactDOM.render(
   <UserProvider>
-    <ThemeProvider theme={theme}>
-
-      <RouterProvider router={routes}/>
-    </ThemeProvider>
+    <ThemeChanger>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={routes} />
+      </ThemeProvider>
+    </ThemeChanger>
   </UserProvider>,
   document.getElementById("root")
 );
