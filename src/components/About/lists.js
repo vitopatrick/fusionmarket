@@ -1,8 +1,3 @@
-import proof from "../../img/prof.png";
-import innovate from "../../img/innovate.png";
-import invest from "../../img/invest.png";
-import secure from "../../img/secure.png";
-
 export const about = [
   {
     id: 1,

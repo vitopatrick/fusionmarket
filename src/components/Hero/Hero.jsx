@@ -1,14 +1,11 @@
 import React from "react";
-import { FaChevronCircleRight } from "react-icons/fa";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 import "./hero.css";
 
 const Hero = () => {
-  // const styles = {
-  //   outerBox:
-  // };
+  const navigate = useNavigate();
 
   return (
     <>
@@ -72,11 +69,13 @@ const Hero = () => {
                   fontSize: "1.2rem",
                   backgroundColor: "#7ed957",
                   color: "#000000",
+                  cursor: "pointer",
                   "&:hover": {
                     backgroundColor: "#7ed957",
                     color: "#fff",
                   },
                 }}
+                onClick={() => navigate("/auth")}
               >
                 Join Our Team Today
               </Button>
@@ -136,8 +135,5 @@ const Hero = () => {
     </>
   );
 };
-
-
-
 
 export default Hero;

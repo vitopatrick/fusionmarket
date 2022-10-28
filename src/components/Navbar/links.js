@@ -6,17 +6,17 @@ export const links = [
   },
   {
     id: 2,
-    path: "/about",
+    path: "#",
     title: "About Us",
   },
   {
     id: 3,
-    path: "/blog",
+    path: "#",
     title: "blog",
   },
   {
     id: 4,
-    path: "/alphatpass",
+    path: "#",
     title: "AlphaPass",
   },
 ];

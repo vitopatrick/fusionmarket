@@ -1,11 +1,11 @@
 import React from "react";
-import { Typography, Box, Divider } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import Testimony from "./Testimony";
 
 const Testimonials = () => {
   return (
     <>
-      <Box sx={{ mt: 12 }}>
+      <Box sx={{ my: 6 }}>
         <Box
           sx={{
             display: "flex",
@@ -23,6 +23,9 @@ const Testimonials = () => {
           >
             Loved by Thousands of Traders Worldwide
           </Typography>
+        </Box>
+        <Box>
+          <Testimony />
         </Box>
       </Box>
     </>

@@ -1,7 +1,6 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import { IconContext } from "react-icons";
-import { reasons } from "./reasons";
 
 const Reason = () => {
   return (

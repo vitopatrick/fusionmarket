@@ -1,6 +1,5 @@
 /*eslint-disable */
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -12,7 +11,12 @@ import Member from "../components/member/Member";
 import Greeting from "../components/Greeting/Greeting";
 
 const Home = () => {
-  const navigate = useNavigate();
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "//code.tidio.co/8hgwgjzxz8ywpe2hcigymmlzh1ihm6ni.js";
+    document.body.append(script);
+  }, []);
 
   return (
     <>

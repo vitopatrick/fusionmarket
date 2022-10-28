@@ -3,9 +3,9 @@ import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Member = () => {
-  // const styles = {
-  //   outerBox:
-  // };
+
+  const navigate = useNavigate();
+
 
   return (
     <>
@@ -75,6 +75,7 @@ const Member = () => {
                     color: "#fff",
                   },
                 }}
+                onClick={() => navigate("/auth")}
               >
                 Join Our Team Today
               </Button>
