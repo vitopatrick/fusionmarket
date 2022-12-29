@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.18f75d4e.chunk.css",
+    "main.js": "/static/js/main.f8b3c229.chunk.js",
+    "main.js.map": "/static/js/main.f8b3c229.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.733a6b22.js",
+    "runtime-main.js.map": "/static/js/runtime-main.733a6b22.js.map",
+    "static/css/2.cbf9153c.chunk.css": "/static/css/2.cbf9153c.chunk.css",
+    "static/js/2.7a4679d6.chunk.js": "/static/js/2.7a4679d6.chunk.js",
+    "static/js/2.7a4679d6.chunk.js.map": "/static/js/2.7a4679d6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.cbf9153c.chunk.css.map": "/static/css/2.cbf9153c.chunk.css.map",
+    "static/css/main.18f75d4e.chunk.css.map": "/static/css/main.18f75d4e.chunk.css.map",
+    "static/js/2.7a4679d6.chunk.js.LICENSE.txt": "/static/js/2.7a4679d6.chunk.js.LICENSE.txt",
+    "static/media/404.06d13bb5.svg": "/static/media/404.06d13bb5.svg",
+    "static/media/bank.0efb394c.png": "/static/media/bank.0efb394c.png",
+    "static/media/btc.1776fea5.png": "/static/media/btc.1776fea5.png",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
+    "static/media/usdt.c1d58766.png": "/static/media/usdt.c1d58766.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.733a6b22.js",
+    "static/css/2.cbf9153c.chunk.css",
+    "static/js/2.7a4679d6.chunk.js",
+    "static/css/main.18f75d4e.chunk.css",
+    "static/js/main.f8b3c229.chunk.js"
+  ]
+}
