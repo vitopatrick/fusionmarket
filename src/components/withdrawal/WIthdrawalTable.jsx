@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import Typography from "@mui/material/Typography";
-import moment from "moment";
+// import moment from "moment";
 import WithdrawalCard from "./WithdrawalCard";
 
 // import firebase function
@@ -40,16 +40,14 @@ const WIthdrawalTable = () => {
 
   return (
     <>
-      {withdrawals.length > 0 ? (
+      {withdrawals ? (
         withdrawals.map((withdrawal, index) => (
           <WithdrawalCard
             amount={withdrawal.amount}
             status={
               !withdrawal.approved ? "is been processed" : "has been approved"
             }
-            date={moment(withdrawal.date.at).format(
-              "dddd, MMMM Do YYYY, h:mm:ss a"
-            )}
+            date={new Date(withdrawal.date.toDate()).toDateString()}
             method={withdrawal.method}
             address={withdrawal.address}
             account={withdrawal.accountNumber}
