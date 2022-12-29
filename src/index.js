@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // ? Import the stylesheets for bootstrap,react-toastify and the index or global stylesheet
-// import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
