@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import RegisterForm from "../components/register-form/Form";
 import LoginForm from "../components/login-form/Form";
+import React from 'react'
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;

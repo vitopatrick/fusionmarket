@@ -1,35 +1,42 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import {
-  AppBar,
   Box,
-  Drawer,
   IconButton,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  ListItemButton,
   Toolbar,
   CssBaseline,
+  useTheme,
+  Divider,
 } from "@mui/material";
-import { MdMenu, MdPowerOff } from "react-icons/md";
+import {
+  MdMenu,
+  MdPowerOff,
+  MdChevronLeft,
+  MdChevronRight,
+} from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
 import { links } from "./sidebar";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import LightDark from "../toggle/LightDark";
+import { AppBar, Drawer, DrawerHeader } from "./styles";
 
-const drawerWidth = 240;
-
-const Layout = (props) => {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
+const Layout = ({ children }) => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(true);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
   };
 
   const handleLogout = () => {
@@ -38,139 +45,76 @@ const Layout = (props) => {
     navigate("/");
   };
 
-  const drawer = (
-    <div>
+  const listComponent = (
+    <>
       <List>
         {links.map((link) => (
-          <ListItem
-            button
-            key={link.text}
-            sx={{ mt: 2 }}
-            onClick={() => navigate(`${link.path}`)}
-          >
-            <ListItemIcon sx={{ mr: 0 }}>{link.icon}</ListItemIcon>
-            <ListItemText primary={link.text} sx={{ ml: 0 }} />
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate(link.path)}>
+              <ListItemIcon>{link.icon}</ListItemIcon>
+              <ListItemText primary={link.text} />
+            </ListItemButton>
           </ListItem>
         ))}
+        <ListItem disablePadding>
+          <ListItemButton onClick={handleLogout}>
+            <ListItemIcon>
+              <MdPowerOff />
+            </ListItemIcon>
+            <ListItemText primary="Logout" />
+          </ListItemButton>
+        </ListItem>
       </List>
-    </div>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
-  return (
-    <>
-      <Box sx={{ display: "flex", bgcolor: "background.default" }}>
-        <CssBaseline />
-        <AppBar
-          position="fixed"
-          sx={{
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
-            ml: { sm: `${drawerWidth}px` },
-          }}
-        >
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MdMenu color="#fff" />
-            </IconButton>
-            <Box>
-              <img src="/img/logo.svg" alt="logo" />
-            </Box>
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-              <LightDark />
-              <IconButton onClick={() => navigate("/account")}>
-                <FaUserCircle />
-              </IconButton>
-            </Box>
-          </Toolbar>
-        </AppBar>
-        <Box
-          component="nav"
-          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-          aria-label="mailbox folders"
-        >
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-            sx={{
-              display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
-          >
-            {drawer}
-            <Box>
-              <List>
-                <ListItem button onClick={handleLogout}>
-                  <ListItemIcon>
-                    <MdPowerOff />
-                  </ListItemIcon>
-                  <ListItemText primary="Logout" />
-                </ListItem>
-              </List>
-            </Box>
-          </Drawer>
-          <Drawer
-            variant="permanent"
-            sx={{
-              display: { xs: "none", sm: "block" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
-            open
-          >
-            {drawer}
-            <Box>
-              <List>
-                <ListItem button onClick={handleLogout}>
-                  <ListItemIcon>
-                    <MdPowerOff />
-                  </ListItemIcon>
-                  <ListItemText primary="Logout" />
-                </ListItem>
-              </List>
-            </Box>
-          </Drawer>
-        </Box>
-        <Box
-          component="main"
-          sx={{
-            flexGrow: 1,
-            p: 3,
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
-          }}
-        >
-          <Toolbar />
-          {props.children}
-        </Box>
-      </Box>
     </>
   );
-};
 
-Layout.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
+  return (
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar position="fixed" open={open}>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{
+              marginRight: 5,
+              ...(open && { display: "none" }),
+            }}
+          >
+            <MdMenu />
+          </IconButton>
+          <Box>
+            <img src="/img/logo.svg" alt="logo" loading="lazy" />
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box>
+              <LightDark />
+            </Box>
+            <Box>
+              <Link to="/account">
+                <FaUserCircle size="32px" />
+              </Link>
+            </Box>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Drawer variant="permanent" open={open}>
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "rtl" ? <MdChevronRight /> : <MdChevronLeft />}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        {listComponent}
+      </Drawer>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <DrawerHeader />
+        {children}
+      </Box>
+    </Box>
+  );
 };
 
 export default Layout;

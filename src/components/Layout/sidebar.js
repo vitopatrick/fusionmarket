@@ -8,6 +8,7 @@ import {
   MdRecycling,
   MdHeadset,
 } from "react-icons/md";
+import React from 'react'
 
 export const links = [
   {
