@@ -25,10 +25,7 @@ const Footer = () => {
                   }}
                   s
                 >
-                  <img
-                    src="https://highstrike.com/wp-content/themes/highstrike/assets/images/footer-logo.svg"
-                    alt="logo"
-                  />
+                  <img src="/img/footer-logo.svg" alt="logo" />
                 </Box>
                 <Typography
                   gutterBottom
