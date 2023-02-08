@@ -143,10 +143,7 @@ const AboutSection = () => {
             </Typography>
           </Box>
           <Box>
-            <img
-              src="https://highstrike.com/wp-content/uploads/2022/06/trading-platform.svg"
-              alt="phone"
-            />
+            <img src="/img/trading-platform.svg" alt="phone" />
           </Box>
         </Box>
       </Container>

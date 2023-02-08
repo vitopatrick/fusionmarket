@@ -116,10 +116,7 @@ const Reason = () => {
               position: "relative",
             }}
           >
-            <img
-              src="https://highstrike.com/wp-content/uploads/2022/06/mobile-app-img.svg"
-              alt="phone"
-            />
+            <img src="/img/mobile-app-img.svg" alt="phone" />
             <Box
               sx={{ position: "absolute", top: "50%", mb: 4, width: "100%" }}
             >
