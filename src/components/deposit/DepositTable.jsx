@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import moment from "moment";
 import { toast } from "react-toastify";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 // import firebase function
 import { collection, onSnapshot } from "firebase/firestore";
@@ -38,7 +39,7 @@ const DepositTable = () => {
         // const data = await getDocs(collectionRef);
         onSnapshot(collectionRef, (doc) => {
           doc.forEach((d) => {
-            setDeposits((prevState) => [...prevState, d.data()]);
+            setDeposits([d.data()]);
           });
         });
       } catch (error) {
@@ -71,7 +72,7 @@ const DepositTable = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {deposit.amount}
+                  {formatCurrency(deposit.amount)}
                 </TableCell>
                 <TableCell>{deposit.method}</TableCell>
                 <TableCell>

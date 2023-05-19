@@ -15,6 +15,7 @@ import { getDoc, doc } from "firebase/firestore";
 import { store } from "../../firebase";
 // user context
 import { UserContext } from "../../context/UserContext";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 const Prices = () => {
   const { user } = useContext(UserContext);
@@ -48,12 +49,9 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Deposited</Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: "bold" }}
-                  >{`$${details.deposited.toLocaleString(
-                    "en-US"
-                  )}.00`}</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                    {formatCurrency(details.deposited)}
+                  </Typography>
                 </Box>
               </Box>
             </Paper>
@@ -70,12 +68,9 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Profit</Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: "bold" }}
-                  >{`$${details.profit.toLocaleString(
-                    "en-US"
-                  )}.00`}</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                    {formatCurrency(details.profit)}
+                  </Typography>
                 </Box>
               </Box>
             </Paper>
@@ -92,10 +87,9 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Bonus</Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: "bold" }}
-                  >{`$${details.bonus.toLocaleString("en-US")}.00`}</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                    {formatCurrency(details.bonus)}
+                  </Typography>
                 </Box>
               </Box>
             </Paper>
@@ -112,12 +106,9 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Ref. Bonus</Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: "bold" }}
-                  >{`$${details.refBonus.toLocaleString(
-                    "en-US"
-                  )}.00`}</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                    {formatCurrency(details.refBonus)}
+                  </Typography>
                 </Box>
               </Box>
             </Paper>
@@ -134,12 +125,9 @@ const Prices = () => {
                 </Box>
                 <Box sx={{ ml: 2 }}>
                   <Typography variant="body1">Balance</Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: "bold" }}
-                  >{`$${details.balance.toLocaleString(
-                    "en-US"
-                  )}.00`}</Typography>
+                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                    {formatCurrency(details.balance)}
+                  </Typography>
                 </Box>
               </Box>
             </Paper>
