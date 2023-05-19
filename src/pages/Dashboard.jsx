@@ -9,8 +9,8 @@ const Dashboard = () => {
     <>
       <Layout>
         <Welcome />
-        <Prices />
         <TradingViews />
+        <Prices />
       </Layout>
     </>
   );
