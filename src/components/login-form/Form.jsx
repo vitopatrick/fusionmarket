@@ -117,6 +117,7 @@ const LoginForm = () => {
           label="Enter Email"
           fullWidth
           inputRef={emailRef}
+          sx={{ my: 3 }}
         />
         <FormControl variant="outlined" fullWidth>
           <InputLabel htmlFor="password">Password</InputLabel>
@@ -124,7 +125,6 @@ const LoginForm = () => {
             id="password"
             type={showPassword ? "text" : "password"}
             inputRef={passwordRef}
-            size="small"
             endAdornment={
               <InputAdornment position="end">
                 <IconButton

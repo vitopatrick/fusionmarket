@@ -17,15 +17,12 @@ import { theme } from "./theme/theme";
 
 // ? Import the user context that will Cover the applications and control authentication state
 import UserProvider from "./context/UserContext";
-import ThemeChanger from "./context/themeContext";
 
 ReactDOM.render(
   <UserProvider>
-    <ThemeChanger>
-      <ThemeProvider theme={theme}>
-        <RouterProvider router={routes} />
-      </ThemeProvider>
-    </ThemeChanger>
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={routes} />
+    </ThemeProvider>
   </UserProvider>,
   document.getElementById("root")
 );

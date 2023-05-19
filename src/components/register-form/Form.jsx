@@ -200,7 +200,6 @@ const RegisterForm = () => {
                 id="password"
                 type={showPassword ? "text" : "password"}
                 inputRef={passwordRef}
-                size="small"
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -223,7 +222,6 @@ const RegisterForm = () => {
                 id="password"
                 type={showPassword ? "text" : "password"}
                 inputRef={passwordConfirmRef}
-                size="small"
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -242,7 +240,7 @@ const RegisterForm = () => {
         </Grid>
         <FormControl fullWidth sx={{ mt: 2, mb: 4 }} disable={disable}>
           <InputLabel>Country</InputLabel>
-          <Select inputRef={countryRef} label="Select Country" size="small">
+          <Select inputRef={countryRef} label="Select Country">
             {country.map((count, index) => (
               <MenuItem value={count.main} key={index}>
                 {count.main}

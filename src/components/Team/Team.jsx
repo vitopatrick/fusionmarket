@@ -25,7 +25,7 @@ const Team = () => {
         <Grid container spacing={3}>
           {memebers.map((memeber) => (
             <Grid item sm={12} md={4}>
-              <Paper sx={{ p: 2 }}>
+              <Paper sx={{ p: 2, bgcolor: "#fff", height: "700px" }}>
                 <Box>
                   <Typography
                     sx={{
@@ -44,20 +44,26 @@ const Team = () => {
                   <img src={memeber.img} alt={memeber.names} />
                 </Box>
                 <Divider />
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>
+                <Box
+                  sx={{ display: "flex", alignItems: "center", color: "#000" }}
+                >
+                  <Typography
+                    sx={{ fontWeight: "bold", fontSize: "14px", color: "#000" }}
+                  >
                     Style:
                   </Typography>
-                  <Typography sx={{ fontSize: "14px" }}>
+                  <Typography sx={{ fontSize: "14px", color: "#000" }}>
                     {memeber.style}
                   </Typography>
                 </Box>
                 <Divider />
                 <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>
+                  <Typography
+                    sx={{ fontWeight: "bold", fontSize: "14px", color: "#000" }}
+                  >
                     Risk Proflie:
                   </Typography>
-                  <Typography sx={{ fontSize: "14px" }}>
+                  <Typography sx={{ fontSize: "14px", color: "#000" }}>
                     {memeber.rp}
                   </Typography>
                 </Box>
@@ -65,14 +71,15 @@ const Team = () => {
                 <Box
                   sx={{
                     display: "flex",
-
                     flexDirection: "column",
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>
+                  <Typography
+                    sx={{ fontWeight: "bold", fontSize: "14px", color: "#000" }}
+                  >
                     Bio:
                   </Typography>
-                  <Typography sx={{ fontSize: "14px" }}>
+                  <Typography sx={{ fontSize: "14px", color: "#000" }}>
                     {memeber.bio}
                   </Typography>
                 </Box>

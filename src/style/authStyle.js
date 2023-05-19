@@ -1,6 +1,5 @@
 export const outerBox = {
   backgroundColor: " #023020",
-  position: "absolute",
   height: "100vh",
   width: "100%",
   p: 2,

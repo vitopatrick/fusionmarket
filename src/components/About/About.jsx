@@ -34,7 +34,11 @@ const About = () => {
               variant="h4"
               component="p"
               textAlign="center"
-              sx={{ color: "#1f4d0b", fontStyle: "italics" }}
+              sx={{
+                color: "#1f4d0b",
+                fontStyle: "italics",
+                textDecoration: "underline",
+              }}
             >
               How it Works:
             </Typography>
@@ -49,10 +53,16 @@ const About = () => {
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
+                      bgcolor: "#fff",
                     }}
                     elevation={0}
                   >
-                    <Box sx={{ width: { xs: "10%", md: "20%" } }}>
+                    <Box
+                      sx={{
+                        width: { xs: "10%", md: "20%" },
+                        height: "100px",
+                      }}
+                    >
                       <img src={about.img} alt={about.title} />
                     </Box>
                     <Box sx={{ mt: 2 }}>
@@ -60,11 +70,15 @@ const About = () => {
                         variant="h6"
                         textAlign="center"
                         gutterBottom
-                        sx={{ fontWeight: "bold" }}
+                        sx={{ fontWeight: "bold", color: "darkgreen", mb: 2 }}
                       >
                         {about.title}
                       </Typography>
-                      <Typography variant="body1" textAlign="center">
+                      <Typography
+                        variant="body1"
+                        textAlign="center"
+                        sx={{ color: "gray" }}
+                      >
                         {about.about}
                       </Typography>
                     </Box>

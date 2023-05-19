@@ -38,7 +38,7 @@ const Auth = () => {
 
   return (
     <Box sx={outerBox}>
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Box sx={paperStyle}>
           <Paper sx={paperStyle}>
             <Box sx={alignItems}>

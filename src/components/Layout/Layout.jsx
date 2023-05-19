@@ -23,13 +23,12 @@ import { links } from "./sidebar";
 import { useNavigate,Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import LightDark from "../toggle/LightDark";
 import { AppBar, Drawer, DrawerHeader } from "./styles";
 
 const Layout = ({ children }) => {
   const navigate = useNavigate();
-  const theme = useTheme();
   const [open, setOpen] = React.useState(true);
+  const theme = useTheme();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -49,7 +48,7 @@ const Layout = ({ children }) => {
     <>
       <List>
         {links.map((link) => (
-          <ListItem disablePadding>
+          <ListItem sx={{ my: 3 }} disablePadding>
             <ListItemButton onClick={() => navigate(link.path)}>
               <ListItemIcon>{link.icon}</ListItemIcon>
               <ListItemText primary={link.text} />
@@ -90,11 +89,8 @@ const Layout = ({ children }) => {
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box>
-              <LightDark />
-            </Box>
-            <Box>
               <Link to="/account">
-                <FaUserCircle size="32px" />
+                <FaUserCircle size="32px" color="#f4f4f4" />
               </Link>
             </Box>
           </Box>

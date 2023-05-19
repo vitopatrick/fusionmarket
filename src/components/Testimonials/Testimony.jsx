@@ -17,13 +17,22 @@ const Testimony = () => {
     <Container sx={{ my: 4 }}>
       <Slider {...settings}>
         {test.map((t) => (
-          <Paper key={t.id} sx={{ width: "360px", height: "270px", p: 2 }}>
+          <Paper
+            key={t.id}
+            sx={{
+              width: "360px",
+              height: "300px",
+              p: 2,
+              bgcolor: "#fff",
+              color: "#000",
+            }}
+          >
             <Box sx={{ display: "flex" }}>
               <Box>
-                <img
+                {/* <img
                   src="https://highstrike.app/assets/images/client-image.svg"
                   alt="logo"
-                />
+                /> */}
               </Box>
               <Box sx={{ px: 2 }}>
                 <Typography
@@ -34,10 +43,10 @@ const Testimony = () => {
                 <Typography>{t.position}</Typography>
               </Box>
               <Box>
-                <img
+                {/* <img
                   src="https://highstrike.app/static/media/quotes-img.380b30dd060a400cf14d.svg"
                   alt="logo"
-                />
+                /> */}
               </Box>
             </Box>
             <Box sx={{ p: 2 }}>

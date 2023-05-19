@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <React.Fragment>
-      <AppBar position="static" elevation={0}>
+      <AppBar position="static" sx={{ bgcolor: "#ffff" }} elevation={0}>
         <Toolbar
           sx={{ p: 1, display: "flex", justifyContent: "space-between" }}
         >
