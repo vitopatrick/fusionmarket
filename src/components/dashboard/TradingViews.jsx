@@ -81,7 +81,7 @@ const TradingViews = () => {
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip text-white bg-bg font-main p-2 rounded">
+      <div className="custom-tooltip text-white bg-neutral-500 font-main p-2 rounded">
         <p className="label">on {label}</p>
         <p className="desc font-bold">{`Price was ${formatCurrency(
           payload[0].value
