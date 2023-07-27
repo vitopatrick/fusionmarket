@@ -16,6 +16,7 @@ import TransactionsPage from "./pages/TransactionsPage";
 import Auth from "./pages/Auth";
 import Refer from "./pages/Refer";
 import Support from "./pages/Support";
+import Privacy from "./pages/Privacy";
 
 export const routes = createBrowserRouter([
   {
@@ -77,5 +78,9 @@ export const routes = createBrowserRouter([
   {
     path: "/support",
     element: <Support />,
+  },
+  {
+    path: "/privacy",
+    element: <Privacy />,
   },
 ]);

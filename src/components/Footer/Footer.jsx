@@ -39,62 +39,7 @@ const Footer = () => {
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} md={3}>
-            <Box>
-              <Typography
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "1.2rem",
-                  color: "#ffffff",
-                  mb: 4,
-                }}
-              >
-                Navigation
-              </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Link
-                  to="/"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  Home
-                </Link>
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  About Us
-                </Link>
-
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  AlphaPass
-                </Link>
-              </Box>
-            </Box>
-          </Grid>
+          <Grid item xs={12} md={3}></Grid>
           <Grid item xs={12} md={3}>
             <Box>
               <Typography
@@ -115,7 +60,7 @@ const Footer = () => {
                 }}
               >
                 <Link
-                  to="#"
+                  to="/privacy"
                   style={{
                     marginTop: "0.5rem",
                     fontWeight: "400",
@@ -123,7 +68,7 @@ const Footer = () => {
                     fontSize: "0.8rem",
                   }}
                 >
-                  Refund Policy
+                  Privacy Policy
                 </Link>
                 <Link
                   to="/auth"
