@@ -80,17 +80,7 @@ const Footer = () => {
                 >
                   About Us
                 </Link>
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  Blog
-                </Link>
+
                 <Link
                   to="#"
                   style={{
@@ -101,17 +91,6 @@ const Footer = () => {
                   }}
                 >
                   AlphaPass
-                </Link>
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  HSX
                 </Link>
               </Box>
             </Box>
@@ -144,40 +123,7 @@ const Footer = () => {
                     fontSize: "0.8rem",
                   }}
                 >
-                  Terms of Use
-                </Link>
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
                   Refund Policy
-                </Link>
-                <Link
-                  to="#"
-                  style={{
-                    marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  FAQ
                 </Link>
                 <Link
                   to="/auth"
