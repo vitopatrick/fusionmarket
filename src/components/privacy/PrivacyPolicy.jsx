@@ -9,11 +9,12 @@ const PrivacyPolicy = () => {
       </p>
       <div>
         <p className="text-neutral-400">
-          This Privacy Policy (“Policy”) describes how HighStrike (“we,” “us,”
-          or “our”) collects, uses, and protects the personal information of
-          users (“you” or “users”) of our trading school services (“Services”).
-          By accessing or using our Services, you agree to the collection and
-          use of your personal information as outlined in this Policy.
+          This Privacy Policy (“Policy”) describes how fusionexmarket (“we,”
+          “us,” or “our”) collects, uses, and protects the personal information
+          of users (“you” or “users”) of our trading school services
+          (“Services”). By accessing or using our Services, you agree to the
+          collection and use of your personal information as outlined in this
+          Policy.
         </p>
         <div className="space-y-4 my-3 text-neutral-400">
           <p> 1. Information We Collect</p>
@@ -71,7 +72,7 @@ const PrivacyPolicy = () => {
             3.2 Legal Requirements: We may disclose your personal information if
             required by law, regulation, legal process, or governmental request.
             We may also disclose information to protect the rights, property, or
-            safety of HighStrike, its users, or others.
+            safety of fusionexmarket, its users, or others.
           </p>{" "}
         </div>
         <div className="space-y-4 my-3 text-neutral-400">

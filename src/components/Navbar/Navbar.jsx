@@ -19,7 +19,7 @@ const Navbar = () => {
         >
           <Link to="/">
             <Box>
-              <img src="/img/logo.svg" alt="highstrike logo" />
+              <img src="/img/logo.svg" alt="fusionexmarket logo" />
             </Box>
           </Link>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -86,7 +86,7 @@ const Navbar = () => {
           >
             <Box sx={{ width: "30%" }}>
               <img
-                src="https://highstrike.com/wp-content/themes/highstrike/assets/images/footer-logo.svg"
+                src="https://fusionexmarket.com/wp-content/themes/fusionexmarket/assets/images/footer-logo.svg"
                 alt="logo"
               />
             </Box>

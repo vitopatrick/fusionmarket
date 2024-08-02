@@ -120,7 +120,7 @@ const RegisterForm = () => {
         uid: user.uid,
       });
       // toast notification
-      toast.success("Welcome to highstrike,You can now login", {
+      toast.success("Welcome to fusionexmarket,You can now login", {
         position: "top-center",
         theme: "colored",
       });

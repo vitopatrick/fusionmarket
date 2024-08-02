@@ -28,7 +28,7 @@ const About = () => {
                 display: "inline-block",
               }}
             >
-              HIGHSTRIKE
+              fusionexmarket
             </Typography>
             <Typography
               variant="h4"

@@ -25,7 +25,7 @@ const Reason = () => {
                   fontWeight: "600",
                 }}
               >
-                HighStrike is a Self-Directed Trader’s Nerve Center
+                fusionexmarket is a Self-Directed Trader’s Nerve Center
               </Typography>
             </Box>
             <Box sx={{ display: "flex", mb: 3 }}>
@@ -60,11 +60,11 @@ const Reason = () => {
                 <Typography
                   sx={{ color: "#404046", width: { sm: "100%", md: "60%" } }}
                 >
-                  HighStrike partners with professional traders around the globe
-                  to provide you a hub of information, education, strategy, live
-                  streams, social media ecosystsems and buy/sell signals for
-                  self-directed traders and investors. Our mission is to help
-                  you make better trading decisions faster.
+                  fusionexmarket partners with professional traders around the
+                  globe to provide you a hub of information, education,
+                  strategy, live streams, social media ecosystsems and buy/sell
+                  signals for self-directed traders and investors. Our mission
+                  is to help you make better trading decisions faster.
                 </Typography>
               </Box>
             </Box>
@@ -121,7 +121,7 @@ const Reason = () => {
               sx={{ position: "absolute", top: "50%", mb: 4, width: "100%" }}
             >
               <img
-                src="https://highstrike.com/wp-content/uploads/2022/06/background-img-pattern.png"
+                src="https://fusionexmarket.com/wp-content/uploads/2022/06/background-img-pattern.png"
                 alt="phone"
               />
             </Box>

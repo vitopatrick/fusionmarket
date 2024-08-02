@@ -39,8 +39,8 @@ const AboutSection = () => {
                 },
               }}
             >
-              HighStrike helps you make better trading decisions faster with a
-              single platform for connecting, analyzing, researching and
+              fusionexmarket helps you make better trading decisions faster with
+              a single platform for connecting, analyzing, researching and
               signaling.
             </Typography>
           </Box>

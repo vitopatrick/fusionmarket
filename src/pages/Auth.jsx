@@ -41,13 +41,7 @@ const Auth = () => {
       <Container maxWidth="md">
         <Box sx={paperStyle}>
           <Paper sx={paperStyle}>
-            <Box sx={alignItems}>
-              <Box sx={imgBox}>
-                <Link to="/">
-                  <img src="/img/logo.svg" alt="logo" />
-                </Link>
-              </Box>
-            </Box>
+            <Box sx={alignItems}></Box>
             <Box>
               <Tabs value={value} onChange={handleChange} centered>
                 <Tab label="Register" />
@@ -62,7 +56,7 @@ const Auth = () => {
             </Box>
             <Box sx={alignItems}>
               <Typography variant="caption" textAlign="center" gutterBottom>
-                © Highstrike.us
+                © fusionexmarket.online
               </Typography>
             </Box>
           </Paper>

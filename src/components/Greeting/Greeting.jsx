@@ -14,8 +14,8 @@ const Greeting = () => {
         what assets to buy or sell.
       </Typography>
       <Typography textAlign="center" variant="body2" sx={{ my: 3 }}>
-        The views and opinions expressed in the HighStrike Trading School group
-        chat by students, instructors, or others are only for discussion
+        The views and opinions expressed in the fusionexmarket Trading School
+        group chat by students, instructors, or others are only for discussion
         purposes and shall not be misconstrued as financial advice. No decision
         to trade any financial asset should be made without doing individual
         research, and any decision to trade a financial asset is completely the
@@ -26,12 +26,12 @@ const Greeting = () => {
         should be treated as such. Cryptocurrencies are digital currencies that
         fluctuate in value rapidly and can cause significant financial losses.
         Any choice to buy or own the HSX cryptocurrency or any cryptocurrencies
-        discussed in HighStrike content is solely the decision of the user.
+        discussed in fusionexmarket content is solely the decision of the user.
         Always do your own research and due diligence before purchasing or
         trading any cryptocurrency.
       </Typography>
       <Typography textAlign="center" variant="body2" sx={{ my: 3 }}>
-        Neither HighStrike Inc. nor its instructors are licensed, financial
+        Neither fusionexmarket Inc. nor its instructors are licensed, financial
         advisors.
       </Typography>
     </Container>

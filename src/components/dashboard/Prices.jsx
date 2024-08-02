@@ -175,7 +175,7 @@ const Prices = () => {
         </Grid>
       </Grid>
       <div className="text-left text-sm capitalize text-neutral-300 my-6">
-        © Highstrike {new Date().getFullYear()}
+        © fusionexmarket {new Date().getFullYear()}
       </div>
     </Box>
   );

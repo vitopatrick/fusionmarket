@@ -12,18 +12,26 @@ import Greeting from "../components/Greeting/Greeting";
 
 const Home = () => {
   useEffect(() => {
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/64a9d61a94cf5d49dc625fae/1h4rmon68";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
+    // Function to load Tidio Chat
+    const loadTidioChat = () => {
+      const tidioScript = document.createElement("script");
+      tidioScript.src = "//code.jivosite.com/widget/kLb2BvxvQ5";
+      tidioScript.async = true;
+      document.body.appendChild(tidioScript);
+    };
+
+    // Load Tidio Chat when component mounts
+    loadTidioChat();
+
+    // Clean up function to remove Tidio Chat when component unmounts
+    return () => {
+      const tidioElement = document.getElementById("tidio-chat");
+      if (tidioElement) {
+        tidioElement.remove();
+      }
+    };
   }, []);
+
   return (
     <>
       <Header />

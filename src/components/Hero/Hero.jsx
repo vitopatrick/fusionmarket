@@ -54,7 +54,7 @@ const Hero = () => {
                 variant="h2"
                 sx={{ color: "black", fontWeight: "700", my: 4 }}
               >
-                HIGHSTRIKE
+                fusionexmarket
               </Typography>
               <Typography
                 variant="body1"
@@ -105,34 +105,6 @@ const Hero = () => {
                 Have a coupon code? Click to apply it.
               </Typography>
             </Box>
-          </Box>
-          <Box
-            sx={{
-              zIndex: "999",
-            }}
-          >
-            <img
-              src="https://highstrike.com/wp-content/uploads/2022/06/banner-mobile-img.png"
-              alt="phone"
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: "0",
-              left: 0,
-              width: "100%",
-              height: "100%",
-              zIndex: {
-                xs: -2,
-                md: 0,
-              },
-            }}
-          >
-            <img
-              src="https://highstrike.com/wp-content/uploads/2022/06/banner-bg.png"
-              alt="phone"
-            />
           </Box>
         </Box>
       </Box>
