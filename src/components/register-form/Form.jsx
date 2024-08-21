@@ -1,9 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import {
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { auth, store } from "../../firebase";
 import { useNavigate } from "react-router-dom";
@@ -98,7 +95,7 @@ const RegisterForm = () => {
         passwordRef.current.value
       );
       // send verification
-      sendEmailVerification(user);
+      // sendEmailVerification(user);
       // set the backdrop
 
       // add to the database
