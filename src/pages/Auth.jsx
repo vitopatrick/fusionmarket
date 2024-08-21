@@ -1,10 +1,9 @@
 import { Container, Paper, Box, Tab, Tabs, Typography } from "@mui/material";
-import { outerBox, paperStyle, imgBox, alignItems } from "../style/authStyle";
-import { Link } from "react-router-dom";
+import { outerBox, paperStyle, alignItems } from "../style/authStyle";
 import { useState, useEffect } from "react";
 import RegisterForm from "../components/register-form/Form";
 import LoginForm from "../components/login-form/Form";
-import React from 'react'
+import React from "react";
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -39,7 +38,7 @@ const Auth = () => {
   return (
     <Box sx={outerBox}>
       <Container maxWidth="md">
-        <Box sx={paperStyle}>
+        <Box>
           <Paper sx={paperStyle}>
             <Box sx={alignItems}></Box>
             <Box>

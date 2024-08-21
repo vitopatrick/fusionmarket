@@ -19,7 +19,10 @@ const Navbar = () => {
         >
           <Link to="/">
             <Box>
-              <img src="/img/logo.svg" alt="fusionexmarket logo" />
+              <img
+                src="https://fusionmarkets.com/sites/65c48ee5071d1a722c98309d/assets/65c4b95f071d1a64a2e06693/logo_copy.svg"
+                alt="fusionexmarket logo"
+              />
             </Box>
           </Link>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -39,12 +42,12 @@ const Navbar = () => {
             <Link to="/auth">
               <Button
                 sx={{
-                  borderRadius: 5,
                   px: 4,
-                  backgroundColor: "#fff",
-                  color: "#7ed957",
+                  mx: 2,
+                  backgroundColor: "#6d28d9",
+                  color: "#fff",
                   "&:hover": {
-                    backgroundColor: "#7ed957",
+                    backgroundColor: "#8b5cf6",
                     color: "#fff",
                   },
                 }}
@@ -55,13 +58,12 @@ const Navbar = () => {
             <Link to="/auth">
               <Button
                 sx={{
-                  borderRadius: 5,
-                  px: 3,
-                  py: 1,
-                  color: "#7ed957",
-                  backgroundColor: "#fff",
+                  px: 4,
+
+                  color: "#fff",
+                  backgroundColor: "#6d28d9",
                   "&:hover": {
-                    backgroundColor: "#7ed957",
+                    backgroundColor: "#8b5cf6",
                     color: "#fff",
                   },
                 }}

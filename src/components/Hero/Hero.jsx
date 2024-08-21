@@ -12,7 +12,7 @@ const Hero = () => {
       <Box
         sx={{
           width: {
-            md: "91%",
+            md: "100%",
             sm: "100%",
           },
           mx: "auto",
@@ -37,72 +37,42 @@ const Hero = () => {
           <Box>
             <Box>
               <Typography
-                variant="h6"
-                sx={{
-                  color: "#000000",
-                  bgcolor: "#ffffff",
-                  display: "inline-block",
-                  p: 1,
-                  borderRadius: 3,
-                  fontSize: ".8rem",
-                  fontWeight: "bold",
-                }}
-              >
-                LAUNCH DISCOUNT LIVE
-              </Typography>
-              <Typography
                 variant="h2"
                 sx={{ color: "black", fontWeight: "700", my: 4 }}
               >
-                fusionexmarket
+                Low Cost Trading for Everyone, Everywhere
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ fontSize: "1.2rem", my: 2, fontWeight: "500" }}
+                sx={{ fontSize: "1.2rem", my: 2, fontWeight: "light" }}
               >
-                Connect with thousands of self-directed traders and investors
-                through live stream, chat and social media ecosystem.
+                We're a Forex and CFD broker with $2.25 per side commission, no
+                fees to deposit and no minimum account size.
               </Typography>
               <Button
                 variant="contained"
                 sx={{
                   fontSize: "1.2rem",
-                  backgroundColor: "#7ed957",
-                  color: "#000000",
+                  backgroundColor: "#5b21b6",
+                  color: "#fff",
                   cursor: "pointer",
                   "&:hover": {
-                    backgroundColor: "#7ed957",
+                    backgroundColor: "#6d28d9",
                     color: "#fff",
                   },
                 }}
                 onClick={() => navigate("/auth")}
               >
-                Join Our Team Today
+                START TRADING
               </Button>
             </Box>
             <Box sx={{ my: 2 }}>
               <Typography
                 variant="body1"
-                sx={{ my: 3, fontWeight: "600", fontSize: "1rem" }}
+                sx={{ my: 3, fontWeight: "light", fontSize: "1rem" }}
               >
                 We are currently hosted on a Discord server but will <br />
                 be moving to our own App this summer.
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ fontWeight: "700", color: "#000000", my: 2 }}
-              >
-                Join NOW while the price is still low!
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 2, fontWeight: "500" }}>
-                (Membership doubles when the app is live)
-              </Typography>
-              <Typography
-                variant="body2"
-                color="lightgreen"
-                sx={{ fontSize: "0.8rem" }}
-              >
-                Have a coupon code? Click to apply it.
               </Typography>
             </Box>
           </Box>

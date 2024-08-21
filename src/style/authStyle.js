@@ -1,5 +1,5 @@
 export const outerBox = {
-  backgroundColor: " #023020",
+  backgroundColor: "#ddd6fe",
   height: "100vh",
   width: "100%",
   p: 2,
@@ -8,6 +8,7 @@ export const outerBox = {
 export const paperStyle = {
   my: 3,
   padding: 1,
+  backgroundColor: "#2e1065",
 };
 
 export const alignItems = {

@@ -13,7 +13,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#2e5f18", p: 3 }} className="footer">
+    <Box sx={{ backgroundColor: "#ddd6fe", p: 3 }} className="footer">
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={3}>
@@ -25,15 +25,15 @@ const Footer = () => {
                   }}
                   s
                 >
-                  <img src="/img/footer-logo.svg" alt="logo" />
+                  <img
+                    src="https://fusionmarkets.com/sites/65c48ee5071d1a722c98309d/assets/65c4b95f071d1a64a2e06693/logo_copy.svg"
+                    alt="logo"
+                  />
                 </Box>
-                <Typography
-                  gutterBottom
-                  sx={{ color: "#fff", fontWeight: "bold" }}
-                >
+                <Typography gutterBottom sx={{ my: 2, fontWeight: "bold" }}>
                   Support
                 </Typography>
-                <Typography sx={{ color: "#fff" }}>
+                <Typography sx={{ fontWeight: "200" }}>
                   support@fusionexmarket.online
                 </Typography>
               </Link>
@@ -44,9 +44,9 @@ const Footer = () => {
             <Box>
               <Typography
                 sx={{
-                  fontWeight: "bold",
+                  fontWeight: "300",
                   fontSize: "1.2rem",
-                  color: "#ffffff",
+
                   mb: 4,
                 }}
               >
@@ -63,8 +63,8 @@ const Footer = () => {
                   to="/privacy"
                   style={{
                     marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
+                    fontWeight: "300",
+
                     fontSize: "0.8rem",
                   }}
                 >
@@ -74,8 +74,8 @@ const Footer = () => {
                   to="/auth"
                   style={{
                     marginTop: "0.5rem",
-                    fontWeight: "400",
-                    color: "#fff",
+                    fontWeight: "300",
+
                     fontSize: "0.8rem",
                   }}
                 >
@@ -87,7 +87,7 @@ const Footer = () => {
           <Grid item xs={12} md={3}>
             <Box>
               <Box>
-                <Typography sx={{ fontWeight: "bold", color: "#fff", mb: 2 }}>
+                <Typography sx={{ fontWeight: "bold", mb: 2 }}>
                   Follow Us
                 </Typography>
                 <Box>
@@ -96,13 +96,13 @@ const Footer = () => {
                 </Box>
               </Box>
               <Box>
-                <Typography sx={{ fontWeight: "bold", color: "#fff", my: 2 }}>
+                <Typography sx={{ fontWeight: "300", my: 2 }}>
                   Subscribe
                 </Typography>
                 <Box>
                   <input
                     type="email"
-                    placholder="Your Email"
+                    placeholder="Your Email"
                     className="input"
                   />
 
@@ -123,11 +123,7 @@ const Footer = () => {
         </Grid>
         <Divider sx={{ color: "#fff", mt: 4 }} />
         <Box>
-          <Typography
-            variant="body1"
-            textAlign="center"
-            sx={{ mt: 5, mb: 2, color: "#fff" }}
-          >
+          <Typography variant="body1" textAlign="center" sx={{ mt: 5, mb: 2 }}>
             © Copyright 2022. fusionexmarket Inc.
           </Typography>
         </Box>

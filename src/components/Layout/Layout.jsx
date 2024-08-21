@@ -85,7 +85,11 @@ const Layout = ({ children }) => {
             <MdMenu />
           </IconButton>
           <Box>
-            <img src="/img/logo.svg" alt="logo" loading="lazy" />
+            <img
+              src="https://fusionmarkets.com/sites/65c48ee5071d1a722c98309d/assets/65c4b95f071d1a64a2e06693/logo_copy.svg"
+              alt="logo"
+              loading="lazy"
+            />
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box>

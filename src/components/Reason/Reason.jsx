@@ -21,11 +21,12 @@ const Reason = () => {
                   mb: 4,
                   fontStyle: "italics",
                   fontSize: "2rem",
-                  width: { md: "60%", sm: "100%" },
+                  width: { md: "90%", sm: "100%" },
                   fontWeight: "600",
+                  color: "#6d28d9",
                 }}
               >
-                fusionexmarket is a Self-Directed Trader’s Nerve Center
+                fusion market is a Self-Directed Trader’s Nerve Center
               </Typography>
             </Box>
             <Box sx={{ display: "flex", mb: 3 }}>
@@ -50,7 +51,7 @@ const Reason = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "#1f4d0b",
+                    color: "#6d28d9",
                     fontSize: "1.3rem",
                     fontWeight: "bold",
                   }}
@@ -58,7 +59,11 @@ const Reason = () => {
                   Our Mission
                 </Typography>
                 <Typography
-                  sx={{ color: "#404046", width: { sm: "100%", md: "60%" } }}
+                  sx={{
+                    color: "#404046",
+                    width: { sm: "100%", md: "60%" },
+                    fontWeight: "light",
+                  }}
                 >
                   fusionexmarket partners with professional traders around the
                   globe to provide you a hub of information, education,
@@ -90,7 +95,7 @@ const Reason = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "#1f4d0b",
+                    color: "#6d28d9",
                     fontSize: "1.3rem",
                     fontWeight: "bold",
                   }}
@@ -98,7 +103,11 @@ const Reason = () => {
                   Our Commitment
                 </Typography>
                 <Typography
-                  sx={{ color: "#404046", width: { sm: "100%", md: "60%" } }}
+                  sx={{
+                    color: "#404046",
+                    width: { sm: "100%", md: "60%" },
+                    fontWeight: "light",
+                  }}
                 >
                   As the popularity of trading and investing shifts from
                   institutional to individual management, we are committed to
@@ -111,20 +120,14 @@ const Reason = () => {
           <Box
             sx={{
               alignSelf: "center",
-              width: "50%",
               display: { xs: "none", md: "block" },
               position: "relative",
             }}
           >
-            <img src="/img/mobile-app-img.svg" alt="phone" />
-            <Box
-              sx={{ position: "absolute", top: "50%", mb: 4, width: "100%" }}
-            >
-              <img
-                src="https://fusionexmarket.com/wp-content/uploads/2022/06/background-img-pattern.png"
-                alt="phone"
-              />
-            </Box>
+            <img
+              src="https://fusionmarkets.com/sites/65c48ee5071d1a722c98309d/assets/667dfcde071d1a275c40ebdd/FM_Homepage_Image__1_.png"
+              alt="phone"
+            />
           </Box>
         </Box>
       </Container>

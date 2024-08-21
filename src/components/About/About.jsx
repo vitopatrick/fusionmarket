@@ -20,7 +20,7 @@ const About = () => {
               textAlign="center"
               gutterBottom
               sx={{
-                color: "#7ed957",
+                color: "#6d28d9",
                 fontSize: "0.6rem",
                 backgroundColor: "#f5f7fe",
                 borderRadius: 2,
@@ -28,14 +28,14 @@ const About = () => {
                 display: "inline-block",
               }}
             >
-              fusionexmarket
+              FusionExMarket
             </Typography>
             <Typography
               variant="h4"
               component="p"
               textAlign="center"
               sx={{
-                color: "#1f4d0b",
+                color: "#6d28d9",
                 fontStyle: "italics",
                 textDecoration: "underline",
               }}
@@ -57,27 +57,19 @@ const About = () => {
                     }}
                     elevation={0}
                   >
-                    <Box
-                      sx={{
-                        width: { xs: "10%", md: "20%" },
-                        height: "100px",
-                      }}
-                    >
-                      <img src={about.img} alt={about.title} />
-                    </Box>
                     <Box sx={{ mt: 2 }}>
                       <Typography
                         variant="h6"
                         textAlign="center"
                         gutterBottom
-                        sx={{ fontWeight: "bold", color: "darkgreen", mb: 2 }}
+                        sx={{ fontWeight: "bold", color: "#6d28d9", mb: 2 }}
                       >
                         {about.title}
                       </Typography>
                       <Typography
                         variant="body1"
                         textAlign="center"
-                        sx={{ color: "gray" }}
+                        sx={{ color: "gray", fontWeight: "light" }}
                       >
                         {about.about}
                       </Typography>

@@ -4,7 +4,11 @@ import React from "react";
 const Greeting = () => {
   return (
     <Container>
-      <Typography textAlign="center" variant="body2" sx={{ my: 3 }}>
+      <Typography
+        textAlign="center"
+        variant="body2"
+        sx={{ my: 3, fontWeight: "200" }}
+      >
         Trading any financial asset is inherently risky and should be treated as
         such. Always do your own research and analysis before purchasing or
         selling any financial asset. Income is in no way guaranteed and you may
@@ -13,7 +17,11 @@ const Greeting = () => {
         for students, provide signals, or in any way tell people specifically
         what assets to buy or sell.
       </Typography>
-      <Typography textAlign="center" variant="body2" sx={{ my: 3 }}>
+      <Typography
+        textAlign="center"
+        variant="body2"
+        sx={{ my: 3, fontWeight: "200" }}
+      >
         The views and opinions expressed in the fusionexmarket Trading School
         group chat by students, instructors, or others are only for discussion
         purposes and shall not be misconstrued as financial advice. No decision
@@ -21,7 +29,11 @@ const Greeting = () => {
         research, and any decision to trade a financial asset is completely the
         responsibility of the student.
       </Typography>
-      <Typography textAlign="center" variant="body2" sx={{ my: 3 }}>
+      <Typography
+        textAlign="center"
+        variant="body2"
+        sx={{ my: 3, fontWeight: "200" }}
+      >
         Buying, holding, and trading cryptocurrency is inherently risky and
         should be treated as such. Cryptocurrencies are digital currencies that
         fluctuate in value rapidly and can cause significant financial losses.
@@ -30,7 +42,11 @@ const Greeting = () => {
         Always do your own research and due diligence before purchasing or
         trading any cryptocurrency.
       </Typography>
-      <Typography textAlign="center" variant="body2" sx={{ my: 3 }}>
+      <Typography
+        textAlign="center"
+        variant="body2"
+        sx={{ my: 3, fontWeight: "200" }}
+      >
         Neither fusionexmarket Inc. nor its instructors are licensed, financial
         advisors.
       </Typography>

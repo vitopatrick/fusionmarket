@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <Box sx={{ backgroundColor: "#1f4d0b", p: 2 }}>
+    <Box sx={{ backgroundColor: "#6d28d9", p: 2 }}>
       <Container>
         <Box>
           <Box>
@@ -39,7 +39,7 @@ const AboutSection = () => {
                 },
               }}
             >
-              fusionexmarket helps you make better trading decisions faster with
+              fusion market helps you make better trading decisions faster with
               a single platform for connecting, analyzing, researching and
               signaling.
             </Typography>
@@ -60,7 +60,7 @@ const AboutSection = () => {
             <Typography
               sx={{
                 mx: 1,
-                backgroundColor: "#2e5f18",
+                backgroundColor: "#a78bfa",
                 color: "#ffffff",
                 fontSize: {
                   xs: "0.6rem",
@@ -71,7 +71,7 @@ const AboutSection = () => {
                 borderRadius: 4,
                 fontWeight: "bold",
                 "&:hover": {
-                  color: "#2e5f18",
+                  color: "#a78bfa",
                   backgroundColor: "#fff",
                 },
               }}
@@ -81,7 +81,7 @@ const AboutSection = () => {
             <Typography
               sx={{
                 mx: 1,
-                backgroundColor: "#2e5f18",
+                backgroundColor: "#a78bfa",
                 color: "#ffffff",
                 fontSize: {
                   xs: "0.6rem",
@@ -92,7 +92,7 @@ const AboutSection = () => {
                 borderRadius: 4,
                 fontWeight: "bold",
                 "&:hover": {
-                  color: "#2e5f18",
+                  color: "#a78bfa",
                   backgroundColor: "#fff",
                 },
               }}
@@ -102,7 +102,7 @@ const AboutSection = () => {
             <Typography
               sx={{
                 mx: 1,
-                backgroundColor: "#2e5f18",
+                backgroundColor: "#a78bfa",
                 color: "#ffffff",
                 fontSize: {
                   xs: "0.6rem",
@@ -113,7 +113,7 @@ const AboutSection = () => {
                 borderRadius: 4,
                 fontWeight: "bold",
                 "&:hover": {
-                  color: "#2e5f18",
+                  color: "#a78bfa",
                   backgroundColor: "#fff",
                 },
               }}
@@ -123,7 +123,7 @@ const AboutSection = () => {
             <Typography
               sx={{
                 mx: 1,
-                backgroundColor: "#2e5f18",
+                backgroundColor: "#a78bfa",
                 color: "#ffffff",
                 fontSize: {
                   xs: "0.6rem",
@@ -141,9 +141,6 @@ const AboutSection = () => {
             >
               Briefing
             </Typography>
-          </Box>
-          <Box>
-            <img src="/img/trading-platform.svg" alt="phone" />
           </Box>
         </Box>
       </Container>
